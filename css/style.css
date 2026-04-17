@@ -188,6 +188,7 @@ body {
   flex-shrink: 0;
 }
 .btn__arrow svg { width: 20px; height: 20px; position: relative; z-index: 1; }
+/* .btn__arrow-bg is visually hidden — the real hover bg is ::after on .btn */
 .btn__arrow-bg {
   position: absolute;
   inset: 0;
@@ -196,9 +197,24 @@ body {
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
 
-/* Simple hover — opacity */
-.btn:hover { opacity: 0.85; }
-/* Arrow rotates on hover */
+/* Hover expand overlay — ::after on .btn (z-index 0, under text) */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+.btn:hover::after { opacity: 1; }
+.btn--primary::after { background-color: rgba(0, 0, 0, 0.25); }
+
+/* Text + arrow ABOVE overlay (z-index 1) */
+.btn__text { position: relative; z-index: 1; }
+.btn__arrow { position: relative; z-index: 1; }
 /* Arrow icon rotates 45deg: diagonal ↗ becomes horizontal → */
 .btn__arrow svg {
   transition: transform 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
