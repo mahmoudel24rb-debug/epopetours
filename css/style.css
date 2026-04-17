@@ -779,126 +779,116 @@ body {
 }
 .highlight__title {
   font-family: var(--font-body);
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.4em;
-  letter-spacing: -0.03em;
-  color: var(--color-light);
-}
-.highlight__desc {
-  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
+  letter-spacing: 0.1px;
+  color: var(--color-light);
+  text-align: center;
+}
+.highlight__desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4em;
   color: rgba(255, 249, 243, 0.7);
+  text-align: center;
 }
 @media (max-width: 1199px) {
   .highlights { display: grid; grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 809px) {
   .highlights { grid-template-columns: 1fr; }
-  .highlight__title { font-size: 18px; }
 }
 
 /* ========================================
-   TESTIMONIALS — Carousel (Savoria)
+   TESTIMONIALS — Savoria exact (framer-vljIy)
+   2 cards side by side in flex row, NOT a carousel
+   Each card: flex column, 467px wide, gap 24px, padding 24px
+   Left: profile row (avatar 64x64 + name) + portrait image
+   Right: rating + H2 title + text
    ======================================== */
-.testi-carousel {
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-}
-.testi-carousel__track {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-.testi-slide {
+.testi-container {
   display: flex;
   flex-direction: row;
-  min-width: 100%;
+  gap: 24px;
+  width: 100%;
+}
+.testi-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+/* Profile row: avatar 64x64 + name/role */
+.testi-card__profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.testi-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  object-fit: cover;
   flex-shrink: 0;
 }
-.testi-slide__left {
-  width: 40%;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border-right: 1px solid var(--color-border);
-}
-.testi-slide__avatar {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.testi-slide__name {
-  font-family: var(--font-body);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  color: var(--color-light);
-}
-.testi-slide__role {
+.testi-card__info { display: flex; flex-direction: column; gap: 4px; }
+.testi-card__name {
   font-family: var(--font-body);
   font-size: 16px;
+  font-weight: 400;
+  color: var(--color-light);
+}
+.testi-card__role {
+  font-family: var(--font-body);
+  font-size: 14px;
   color: rgba(255, 249, 243, 0.7);
 }
-.testi-slide__right {
-  width: 60%;
-  padding: 24px;
+/* Portrait image below profile */
+.testi-card__image {
+  width: 100%;
+  aspect-ratio: 1.477 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+/* Right content */
+.testi-card__right {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.testi-slide__food {
-  width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid var(--color-border);
+.testi-card__rating {
+  height: 24px;
+  color: var(--color-cta);
+  font-size: 18px;
+  letter-spacing: 2px;
 }
-.testi-slide__stars { color: var(--color-cta); font-size: 18px; letter-spacing: 2px; }
-.testi-slide__quote {
+.testi-card__title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 500;
-  line-height: 1.4em;
-  letter-spacing: -0.03em;
+  line-height: 1.3em;
+  letter-spacing: -0.3px;
   color: var(--color-light);
 }
-.testi-slide__text {
+.testi-card__text {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.4em;
   color: rgba(255, 249, 243, 0.7);
 }
-
-.testi-carousel__nav {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px;
-  border-top: 1px solid var(--color-border);
+@media (max-width: 1199px) {
+  .testi-card__title { font-size: 32px; }
 }
-.testi-arrow {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--color-light);
-  transition: background 0.2s ease;
-}
-.testi-arrow:hover { background: var(--color-cta); border-color: var(--color-cta); }
-.testi-arrow svg { width: 18px; height: 18px; }
-
 @media (max-width: 809px) {
-  .testi-slide { flex-direction: column; }
-  .testi-slide__left { width: 100%; flex-direction: row; align-items: center; border-right: none; border-bottom: 1px solid var(--color-border); }
-  .testi-slide__avatar { width: 80px; height: 80px; aspect-ratio: 1; border-radius: 50%; }
-  .testi-slide__right { width: 100%; }
-  .testi-slide__quote { font-size: 18px; }
+  .testi-container { flex-direction: column; }
+  .testi-card { padding: 12px; }
+  .testi-card__title { font-size: 28px; }
 }
 
 /* ========================================

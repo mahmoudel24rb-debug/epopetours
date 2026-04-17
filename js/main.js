@@ -50,25 +50,5 @@
     });
   }
 
-  /* Testimonials carousel */
-  var testiTrack = document.getElementById('testi-track');
-  var testiPrev = document.getElementById('testi-prev');
-  var testiNext = document.getElementById('testi-next');
-  if (testiTrack && testiPrev && testiNext) {
-    var slides = testiTrack.querySelectorAll('.testi-slide');
-    var current = 0;
-    var total = slides.length;
-    function goTo(i) {
-      if (i < 0) i = total - 1;
-      if (i >= total) i = 0;
-      current = i;
-      testiTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
-    }
-    testiPrev.addEventListener('click', function () { goTo(current - 1); });
-    testiNext.addEventListener('click', function () { goTo(current + 1); });
-    testiTrack.closest('.testi-carousel').addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') { goTo(current - 1); e.preventDefault(); }
-      if (e.key === 'ArrowRight') { goTo(current + 1); e.preventDefault(); }
-    });
-  }
+  /* Testimonials: pas de carousel, 2 cards côte à côte (Savoria) */
 })();
