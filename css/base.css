@@ -156,46 +156,7 @@ p {
   }
 }
 
-/* ========================================
-   Sections
-   ======================================== */
-.section {
-  padding: var(--space-24) 0;
-}
-
-@media (min-width: 768px) {
-  .section { padding: var(--space-32) 0; }
-}
-
-.section--dark  { background-color: var(--color-bg); }
-.section--light { background-color: var(--color-bg-alt); }
-.section--deep  { background-color: var(--color-bg-deep); }
-
-/* ========================================
-   Section Header (label + titre + sous-titre)
-   ======================================== */
-.section__header {
-  text-align: center;
-  margin-bottom: var(--space-12);
-}
-
-.section__header--left {
-  text-align: left;
-}
-
-.section__header h2 {
-  margin-top: var(--space-4);
-}
-
-.section__header p {
-  margin-top: var(--space-4);
-  max-width: 600px;
-}
-
-.section__header:not(.section__header--left) p {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Sections & Section Headers → see sections.css */
 
 /* ========================================
    Badge (label de section)
@@ -228,7 +189,7 @@ p {
   font-weight: 500;
   line-height: 1;
   padding: var(--space-3) var(--space-8);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   transition: background-color var(--dur-fast) var(--ease-out),
               color var(--dur-fast) var(--ease-out),
               border-color var(--dur-fast) var(--ease-out),
@@ -303,40 +264,7 @@ p {
   color: var(--color-accent);
 }
 
-/* ========================================
-   Grids
-   ======================================== */
-.grid {
-  display: grid;
-  gap: var(--space-6);
-}
-
-.grid--2x2 {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-  .grid--2x2 { grid-template-columns: repeat(2, 1fr); }
-}
-
-.grid--4 {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 640px) {
-  .grid--4 { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-  .grid--4 { grid-template-columns: repeat(4, 1fr); }
-}
-
-.grid--footer {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 640px) {
-  .grid--footer { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-  .grid--footer { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
-}
+/* Grids → each component defines its own grid in components.css */
 
 /* ========================================
    Accessibility

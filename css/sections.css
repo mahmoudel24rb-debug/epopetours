@@ -1,5 +1,46 @@
 /* ========================================
-   Hero — Layout 2 colonnes (fidèle Savoria)
+   Sections — global spacing
+   ======================================== */
+.section {
+  padding: var(--space-24) 0;
+}
+
+@media (min-width: 768px) {
+  .section { padding: var(--space-32) 0; }
+}
+
+.section--dark  { background-color: var(--color-bg); }
+.section--light { background-color: var(--color-bg-alt); }
+.section--deep  { background-color: var(--color-bg-deep); }
+
+/* ========================================
+   Section Header
+   ======================================== */
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section__header h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  color: var(--color-fg);
+  margin-top: var(--space-4);
+  line-height: 1.15;
+}
+
+.section__header p {
+  margin-top: var(--space-4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-fg-muted);
+  line-height: 1.6;
+}
+
+/* ========================================
+   Hero — 2 colonnes (fidèle Savoria)
    ======================================== */
 .hero {
   display: grid;
@@ -10,7 +51,6 @@
   overflow: hidden;
 }
 
-/* --- Colonne gauche : contenu --- */
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -20,7 +60,6 @@
   z-index: 2;
 }
 
-/* 3 assiettes flottantes rondes (haut de la col gauche) */
 .hero__dishes {
   display: flex;
   align-items: center;
@@ -43,29 +82,16 @@
   object-fit: cover;
 }
 
-.hero__dish:nth-child(1) {
-  transform: rotate(-2deg);
-  z-index: 3;
-}
-.hero__dish:nth-child(2) {
-  transform: rotate(-6deg);
-  margin-left: -24px;
-  z-index: 2;
-}
-.hero__dish:nth-child(3) {
-  transform: rotate(15deg);
-  margin-left: -24px;
-  z-index: 1;
-}
+.hero__dish:nth-child(1) { transform: rotate(-2deg); z-index: 3; }
+.hero__dish:nth-child(2) { transform: rotate(-6deg); margin-left: -24px; z-index: 2; }
+.hero__dish:nth-child(3) { transform: rotate(15deg); margin-left: -24px; z-index: 1; }
 
-/* Texte + CTAs en bas de la colonne gauche */
 .hero__text {
   margin-top: auto;
 }
 
 .hero .badge {
   margin-bottom: var(--space-6);
-  color: var(--color-fg-muted);
 }
 
 .hero__title {
@@ -86,7 +112,6 @@
 .hero__subtitle {
   font-family: var(--font-body);
   font-size: clamp(1rem, 1.2vw, 1.125rem);
-  font-weight: 400;
   color: var(--color-fg-muted);
   line-height: 1.6;
   max-width: 450px;
@@ -100,44 +125,6 @@
   flex-wrap: wrap;
 }
 
-/* Bouton avec icône flèche circulaire (style Savoria) */
-.btn--arrow {
-  padding: 8px 8px 8px 20px;
-  gap: var(--space-4);
-}
-
-.btn__icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background-color var(--dur-fast) var(--ease-out);
-}
-
-.btn--primary .btn__icon {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.btn--primary:hover .btn__icon {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.btn--ghost .btn__icon {
-  background-color: rgba(245, 235, 224, 0.1);
-}
-.btn--ghost:hover .btn__icon {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
-}
-
-.btn__icon svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* --- Colonne droite : image --- */
 .hero__image {
   position: relative;
   overflow: hidden;
@@ -150,7 +137,6 @@
   display: block;
 }
 
-/* Gradient mask : fondu de l'image vers le fond sombre à gauche */
 .hero__image::before {
   content: '';
   position: absolute;
@@ -163,20 +149,10 @@
   pointer-events: none;
 }
 
-/* ========================================
-   Hero responsive
-   ======================================== */
 @media (max-width: 1024px) {
-  .hero {
-    grid-template-columns: 50% 50%;
-  }
-  .hero__content {
-    padding: 80px 32px 32px;
-  }
-  .hero__dish {
-    width: 110px;
-    height: 110px;
-  }
+  .hero { grid-template-columns: 50% 50%; }
+  .hero__content { padding: 80px 32px 32px; }
+  .hero__dish { width: 110px; height: 110px; }
 }
 
 @media (max-width: 768px) {
@@ -184,9 +160,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 50vh auto;
   }
-  .hero__image {
-    order: -1;
-  }
+  .hero__image { order: -1; }
   .hero__image::before {
     width: 100%;
     height: 40%;
@@ -194,16 +168,9 @@
     bottom: 0;
     background: linear-gradient(to top, var(--color-bg), transparent);
   }
-  .hero__content {
-    padding: var(--space-8) var(--space-6) var(--space-12);
-  }
-  .hero__dishes {
-    margin-bottom: var(--space-8);
-  }
-  .hero__dish {
-    width: 90px;
-    height: 90px;
-  }
+  .hero__content { padding: var(--space-8) var(--space-6) var(--space-12); }
+  .hero__dishes { margin-bottom: var(--space-8); }
+  .hero__dish { width: 90px; height: 90px; }
 }
 
 @media (max-width: 480px) {
@@ -211,157 +178,5 @@
     flex-direction: column;
     width: 100%;
   }
-  .hero__ctas .btn {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-
-/* ========================================
-   Philosophie
-   ======================================== */
-.philosophie {
-  display: flex;
-  align-items: center;
-  gap: var(--space-16);
-}
-
-.philosophie__content {
-  flex: 1;
-  max-width: 650px;
-}
-
-.philosophie__content .badge {
-  margin-bottom: var(--space-4);
-}
-
-.philosophie__content h2 {
-  margin-bottom: var(--space-6);
-}
-
-.philosophie__content p {
-  margin-bottom: var(--space-8);
-  line-height: 1.7;
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-}
-
-.philosophie__media {
-  flex: 1;
-  max-width: 500px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.philosophie__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 4 / 5;
-}
-
-@media (max-width: 768px) {
-  .philosophie {
-    flex-direction: column;
-    gap: var(--space-8);
-  }
-  .philosophie__content {
-    text-align: center;
-    max-width: 100%;
-  }
-  .philosophie__media {
-    max-width: 100%;
-    width: 100%;
-  }
-  .philosophie__media img {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-/* ========================================
-   Notre Carte
-   ======================================== */
-.carte-section .grid--2x2 {
-  gap: var(--space-8);
-}
-
-/* ========================================
-   Plats signatures (marquee section)
-   ======================================== */
-.plats-section .section__header {
-  margin-bottom: var(--space-8);
-}
-
-/* ========================================
-   Ambiance (gallery section)
-   ======================================== */
-.ambiance-section .gallery {
-  margin-top: var(--space-4);
-}
-
-/* ========================================
-   Histoire + Atouts
-   ======================================== */
-.histoire {
-  display: flex;
-  align-items: center;
-  gap: var(--space-16);
-}
-
-.histoire__content {
-  flex: 1;
-  max-width: 650px;
-}
-
-.histoire__content .badge {
-  margin-bottom: var(--space-4);
-}
-
-.histoire__content h2 {
-  margin-bottom: var(--space-6);
-}
-
-.histoire__content p {
-  margin-bottom: var(--space-8);
-  line-height: 1.7;
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-}
-
-.histoire__media {
-  flex: 1;
-  max-width: 500px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.histoire__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 3 / 4;
-}
-
-@media (max-width: 768px) {
-  .histoire {
-    flex-direction: column;
-    gap: var(--space-8);
-  }
-  .histoire__content {
-    text-align: center;
-    max-width: 100%;
-  }
-  .histoire__media {
-    max-width: 100%;
-    width: 100%;
-  }
-  .histoire__media img {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-.atouts-section {
-  padding-top: 0;
-}
-
-.atouts-section .grid--4 {
-  gap: var(--space-4);
+  .hero__ctas .btn { width: 100%; justify-content: space-between; }
 }

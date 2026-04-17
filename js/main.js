@@ -1,37 +1,20 @@
 /* ========================================
    L'Épopée — Main JS
-   Nav scroll + Mobile menu
    ======================================== */
-
 (function () {
   'use strict';
 
-  /* ----- Nav scroll effect ----- */
+  /* ----- Nav scroll ----- */
   var nav = document.getElementById('nav');
-
   function onScroll() {
-    if (window.scrollY > 50) {
-      nav.classList.add('is-scrolled');
-    } else {
-      nav.classList.remove('is-scrolled');
-    }
+    nav.classList.toggle('is-scrolled', window.scrollY > 50);
   }
-
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ----- Mobile menu toggle ----- */
+  /* ----- Mobile menu ----- */
   var hamburger = document.querySelector('.nav__hamburger');
   var overlay = document.getElementById('nav-overlay');
-
-  if (!hamburger || !overlay) return;
-
-  function openMenu() {
-    hamburger.setAttribute('aria-expanded', 'true');
-    overlay.classList.add('is-open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
 
   function closeMenu() {
     hamburger.setAttribute('aria-expanded', 'false');
@@ -40,40 +23,61 @@
     document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', function () {
-    var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
+  if (hamburger && overlay) {
+    hamburger.addEventListener('click', function () {
+      var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        hamburger.setAttribute('aria-expanded', 'true');
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
 
-  /* Fermer le menu au clic sur un lien */
-  var overlayLinks = overlay.querySelectorAll('a');
-  for (var i = 0; i < overlayLinks.length; i++) {
-    overlayLinks[i].addEventListener('click', closeMenu);
+    overlay.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeMenu();
+        hamburger.focus();
+      }
+    });
   }
 
-  /* Fermer avec Escape */
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
-      closeMenu();
-      hamburger.focus();
-    }
-  });
+  /* ----- Menu tabs (Savoria style) ----- */
+  var menuTabs = document.getElementById('menu-tabs');
+  if (menuTabs) {
+    var items = menuTabs.querySelectorAll('.menu__item');
+    var images = menuTabs.querySelectorAll('.menu__image');
 
-  /* ========================================
-     Testimonial Slider
-     ======================================== */
-  var track = document.getElementById('slider-track');
-  var prevBtn = document.getElementById('slider-prev');
-  var nextBtn = document.getElementById('slider-next');
-  var dotsContainer = document.getElementById('slider-dots');
+    items.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        var idx = item.getAttribute('data-menu');
 
-  if (track && prevBtn && nextBtn && dotsContainer) {
-    var slides = track.querySelectorAll('.slider__slide');
-    var dots = dotsContainer.querySelectorAll('.slider__dot');
+        items.forEach(function (i) { i.classList.remove('is-active'); });
+        images.forEach(function (img) { img.classList.remove('is-active'); });
+
+        item.classList.add('is-active');
+        var target = menuTabs.querySelector('.menu__image[data-menu="' + idx + '"]');
+        if (target) target.classList.add('is-active');
+      });
+    });
+  }
+
+  /* ----- Testimonial carousel ----- */
+  var testiTrack = document.getElementById('testimonial-track');
+  var testiPrev = document.getElementById('testi-prev');
+  var testiNext = document.getElementById('testi-next');
+  var testiDots = document.getElementById('testi-dots');
+
+  if (testiTrack && testiPrev && testiNext && testiDots) {
+    var slides = testiTrack.querySelectorAll('.testimonial-slide');
+    var dots = testiDots.querySelectorAll('.testimonial-carousel__dot');
     var current = 0;
     var total = slides.length;
 
@@ -81,24 +85,21 @@
       if (index < 0) index = total - 1;
       if (index >= total) index = 0;
       current = index;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-
-      for (var d = 0; d < dots.length; d++) {
-        dots[d].classList.toggle('is-active', d === current);
-      }
+      testiTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, i) {
+        d.classList.toggle('is-active', i === current);
+      });
     }
 
-    prevBtn.addEventListener('click', function () { goTo(current - 1); });
-    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+    testiPrev.addEventListener('click', function () { goTo(current - 1); });
+    testiNext.addEventListener('click', function () { goTo(current + 1); });
 
-    for (var d = 0; d < dots.length; d++) {
-      (function (idx) {
-        dots[idx].addEventListener('click', function () { goTo(idx); });
-      })(d);
-    }
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); });
+    });
 
-    /* Navigation clavier */
-    track.closest('.slider').addEventListener('keydown', function (e) {
+    /* Keyboard navigation */
+    testiTrack.closest('.testimonial-carousel').addEventListener('keydown', function (e) {
       if (e.key === 'ArrowLeft') { goTo(current - 1); e.preventDefault(); }
       if (e.key === 'ArrowRight') { goTo(current + 1); e.preventDefault(); }
     });
