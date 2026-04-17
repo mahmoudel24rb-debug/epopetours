@@ -124,30 +124,61 @@
 
   <main>
 
-    <!-- ===== HERO ===== -->
-    <section id="accueil" class="hero section--dark">
-      <img class="hero__bg"
-           src="./assets/images/OXaxugtV9BC6qYFwJcHAQqzw.webp"
-           alt="Table dressée avec des plats du restaurant L'Épopée à Tours"
-           width="1920" height="1080"
-           fetchpriority="high">
-      <div class="hero__overlay" aria-hidden="true"></div>
+    <!-- ===== HERO — Layout 2 colonnes (fidèle Savoria) ===== -->
+    <section id="accueil" class="hero">
 
-      <div class="hero__content container">
-        <span class="badge">Bistrot · Tours</span>
-        <h1 class="hero__title">
-          Bienvenue à <em>L'Épopée</em>,<br>
-          votre bistrot convivial
-        </h1>
-        <p class="hero__subtitle">
-          Produits de saison, sélection de vins de vignerons, et une ambiance
-          chaleureuse pour partager des moments inoubliables.
-        </p>
-        <div class="hero__ctas">
-          <a href="#reservation" class="btn btn--primary">Réserver une table</a>
-          <a href="#menu" class="btn btn--ghost">Voir la carte</a>
+      <!-- Colonne gauche : assiettes + texte + CTAs -->
+      <div class="hero__content">
+        <div class="hero__dishes">
+          <div class="hero__dish">
+            <img src="./assets/images/3veQ5mDnGLiIZo2h7y7d49tIaw.png"
+                 alt="Assiette de saison" width="184" height="184">
+          </div>
+          <div class="hero__dish">
+            <img src="./assets/images/4RKqYayWW9SQszIdde4gZNF7oI.png"
+                 alt="Plat du jour" width="189" height="189">
+          </div>
+          <div class="hero__dish">
+            <img src="./assets/images/FlPL0Fo2UpqNSJ4U3TfNGtWosi8.png"
+                 alt="Dessert maison" width="170" height="170">
+          </div>
+        </div>
+
+        <div class="hero__text">
+          <span class="badge">Bistrot · Tours</span>
+          <h1 class="hero__title">
+            Bienvenue à<br><em>L'Épopée</em>,<br>
+            votre bistrot convivial
+          </h1>
+          <p class="hero__subtitle">
+            Produits de saison, sélection de vins de vignerons, et une ambiance
+            chaleureuse pour partager des moments inoubliables.
+          </p>
+          <div class="hero__ctas">
+            <a href="#reservation" class="btn btn--primary btn--arrow">
+              Réserver une table
+              <span class="btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </a>
+            <a href="#menu" class="btn btn--ghost btn--arrow">
+              Voir la carte
+              <span class="btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- Colonne droite : grande image bord à bord -->
+      <div class="hero__image">
+        <img src="./assets/images/OXaxugtV9BC6qYFwJcHAQqzw.webp"
+             alt="Table dressée avec des plats du restaurant L'Épopée à Tours"
+             width="1920" height="1080"
+             fetchpriority="high">
+      </div>
+
     </section>
 
     <!-- ===== MARQUEE L'ÉPOPÉE ===== -->
