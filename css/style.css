@@ -162,7 +162,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.btn:hover { opacity: 0.9; }
+/* hover animation handled by .btn__arrow-bg expand */
 
 .btn--primary {
   background-color: var(--color-cta);
@@ -193,8 +193,18 @@ body {
   inset: 0;
   border-radius: 999px;
   background-color: rgba(44, 44, 44, 0.7);
+  transition: inset 0.4s cubic-bezier(0.12, 0.23, 0.5, 1),
+              border-radius 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
+
+/* Hover: circle expands to cover entire button (Savoria effect) */
+.btn:hover .btn__arrow-bg {
+  inset: -74px -89px -83px -210px;
+  border-radius: 4px;
+}
+/* Text stays above the expanding bg */
+.btn:hover > *:not(.btn__arrow) { position: relative; z-index: 1; }
 
 /* Arrow SVG icon path (↗) — inline in HTML */
 
