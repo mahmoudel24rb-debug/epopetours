@@ -142,31 +142,260 @@
 
     </section>
 
-    <!-- ===== MARQUEE TEXTE ===== -->
-    <section class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span class="marquee__group">
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-        </span>
-        <span class="marquee__group" aria-hidden="true">
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-          <span class="marquee__word">L'Épopée</span><span class="marquee__sep">✦</span>
-        </span>
+    <!-- ===== MENU — 2 colonnes tabs ===== -->
+    <section id="menu" class="section">
+      <div class="section__inner">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">Notre carte</h2>
+          </div>
+          <p class="section-heading__subtitle">Une carte qui évolue au fil des saisons et des arrivages du marché</p>
+        </div>
+        <div class="menu" id="menu-tabs">
+          <div class="menu__left">
+            <div class="menu__categories">
+              <a class="menu__item is-active" data-menu="0" href="#menu">
+                <div class="menu__item-content">
+                  <h4 class="menu__item-title">Entrées</h4>
+                  <p class="menu__item-desc">À partager ou pour commencer — nos petites assiettes de saison</p>
+                </div>
+                <svg class="menu__item-arrow" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg>
+              </a>
+              <div class="menu__divider"></div>
+              <a class="menu__item" data-menu="1" href="#menu">
+                <div class="menu__item-content">
+                  <h4 class="menu__item-title">Plats du marché</h4>
+                  <p class="menu__item-desc">Cuisinés chaque jour selon l'arrivage du marché et des producteurs</p>
+                </div>
+                <svg class="menu__item-arrow" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg>
+              </a>
+              <div class="menu__divider"></div>
+              <a class="menu__item" data-menu="2" href="#menu">
+                <div class="menu__item-content">
+                  <h4 class="menu__item-title">Desserts maison</h4>
+                  <p class="menu__item-desc">Réconfortants et inventifs — la touche finale d'un repas</p>
+                </div>
+                <svg class="menu__item-arrow" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg>
+              </a>
+              <div class="menu__divider"></div>
+              <a class="menu__item" data-menu="3" href="#menu">
+                <div class="menu__item-content">
+                  <h4 class="menu__item-title">Carte des vins</h4>
+                  <p class="menu__item-desc">Sélection de vignerons — Loire en tête — choisie avec passion</p>
+                </div>
+                <svg class="menu__item-arrow" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg>
+              </a>
+            </div>
+            <a href="#menu" class="btn btn--ghost menu__btn">Voir la carte complète <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
+          </div>
+          <div class="menu__right">
+            <img class="menu__image is-active" data-menu="0" src="./assets/images/9V7SDG3tB838YFpryLeteV38NM.png" alt="Entrées" loading="lazy">
+            <img class="menu__image" data-menu="1" src="./assets/images/tpGFIq7ObwXoiJyNP1brE9tUM.png" alt="Plats" loading="lazy">
+            <img class="menu__image" data-menu="2" src="./assets/images/efH3GoySpPrc2pWkXRQXroWHems.png" alt="Desserts" loading="lazy">
+            <img class="menu__image" data-menu="3" src="./assets/images/sZ3PTm542DAM4Bn6XjcOyb1gV3M.png" alt="Vins" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Sections suivantes ajoutées après validation -->
+    <!-- ===== SIGNATURE DISHES — Ticker ===== -->
+    <section class="section section--light">
+      <div class="section__inner">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">Nos plats signatures</h2>
+          </div>
+          <p class="section-heading__subtitle">Savourez l'instant avec nos plats cuisinés avec passion et savoir-faire.</p>
+        </div>
+      </div>
+      <div class="ticker">
+        <ul class="ticker__track">
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/cDcsV8kitOIP6wus6TFe55S6Hw.png" alt="Œuf parfait" loading="lazy"></div><p class="dish-card__name">Œuf parfait, mouillettes de comté</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/1TeDhiFzE9GV7mFPrWPf5UaPs8w.png" alt="Tartare de bœuf" loading="lazy"></div><p class="dish-card__name">Tartare de bœuf au couteau</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/WBxJ3qin8yeN6rGQ4kSLed0T7xY.png" alt="Quenelle de brochet" loading="lazy"></div><p class="dish-card__name">Quenelle de brochet, sauce Nantua</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/XPuqH8MPUNYomlKhRjraucjKGsc.png" alt="Rillons de Touraine" loading="lazy"></div><p class="dish-card__name">Rillons de Touraine</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/mAOu3A5k1wgzKstAFlC0xzkD8Bg.png" alt="Tarte Tatin" loading="lazy"></div><p class="dish-card__name">Tarte Tatin minute</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/uJ8s5QaULeThA2JRoHUeOECmuM.png" alt="Pavé de bœuf" loading="lazy"></div><p class="dish-card__name">Pavé de bœuf, sauce bordelaise</p></li>
+          <li class="dish-card"><div class="dish-card__img"><img src="./assets/images/DgMyOvjAJgLu0uLiuL6hOAJqA.png" alt="Saint-nectaire fermier" loading="lazy"></div><p class="dish-card__name">Saint-nectaire fermier</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/cDcsV8kitOIP6wus6TFe55S6Hw.png" alt="" loading="lazy"></div><p class="dish-card__name">Œuf parfait, mouillettes de comté</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/1TeDhiFzE9GV7mFPrWPf5UaPs8w.png" alt="" loading="lazy"></div><p class="dish-card__name">Tartare de bœuf au couteau</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/WBxJ3qin8yeN6rGQ4kSLed0T7xY.png" alt="" loading="lazy"></div><p class="dish-card__name">Quenelle de brochet, sauce Nantua</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/XPuqH8MPUNYomlKhRjraucjKGsc.png" alt="" loading="lazy"></div><p class="dish-card__name">Rillons de Touraine</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/mAOu3A5k1wgzKstAFlC0xzkD8Bg.png" alt="" loading="lazy"></div><p class="dish-card__name">Tarte Tatin minute</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/uJ8s5QaULeThA2JRoHUeOECmuM.png" alt="" loading="lazy"></div><p class="dish-card__name">Pavé de bœuf, sauce bordelaise</p></li>
+          <li class="dish-card" aria-hidden="true"><div class="dish-card__img"><img src="./assets/images/DgMyOvjAJgLu0uLiuL6hOAJqA.png" alt="" loading="lazy"></div><p class="dish-card__name">Saint-nectaire fermier</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== AMBIANCE — Carousel ===== -->
+    <section id="ambiance" class="section section--light" style="padding-left:0;padding-right:0;">
+      <div class="section__inner" style="padding:0 40px;">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">L'ambiance</h2>
+          </div>
+          <p class="section-heading__subtitle">Un bistrot chaleureux, à deux pas du centre de Tours, où l'on se sent vite comme à la maison.</p>
+        </div>
+      </div>
+      <div class="ambiance-carousel">
+        <div class="ambiance-carousel__track">
+          <div class="ambiance-card"><img src="./assets/images/MNjoZNXzt2gq5J0haAKAH7T75s.png" alt="Salle du restaurant" loading="lazy"></div>
+          <div class="ambiance-card"><img src="./assets/images/E28s7XqLaKOapltaPlGRYqEgOA.png" alt="Détail de table" loading="lazy"></div>
+          <div class="ambiance-card"><img src="./assets/images/3veQ5mDnGLiIZo2h7y7d49tIaw.png" alt="Plats et convivialité" loading="lazy"></div>
+          <div class="ambiance-card"><img src="./assets/images/8ZRBF9h7rHgRxyPpRln96DMnR5w.png" alt="Vue intérieure" loading="lazy"></div>
+          <div class="ambiance-card"><img src="./assets/images/OSGNdAPLJgu7cTWN5d4Dli2XU6w.png" alt="Le bar" loading="lazy"></div>
+          <div class="ambiance-card"><img src="./assets/images/4RKqYayWW9SQszIdde4gZNF7oI.png" alt="Ambiance du soir" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/MNjoZNXzt2gq5J0haAKAH7T75s.png" alt="" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/E28s7XqLaKOapltaPlGRYqEgOA.png" alt="" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/3veQ5mDnGLiIZo2h7y7d49tIaw.png" alt="" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/8ZRBF9h7rHgRxyPpRln96DMnR5w.png" alt="" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/OSGNdAPLJgu7cTWN5d4Dli2XU6w.png" alt="" loading="lazy"></div>
+          <div class="ambiance-card" aria-hidden="true"><img src="./assets/images/4RKqYayWW9SQszIdde4gZNF7oI.png" alt="" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT — 2 colonnes + highlights ===== -->
+    <section id="apropos" class="section">
+      <div class="section__inner">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">Notre histoire</h2>
+          </div>
+          <p class="section-heading__subtitle">L'épopée d'un bistrot à Tours</p>
+        </div>
+        <div class="about-box">
+          <div class="about-box__image">
+            <img src="./assets/images/adA3ca5MJSdYVtT9ZmtqJigs.jpg" alt="L'équipe de L'Épopée" loading="lazy">
+            <span class="about-box__badge">Bistrot de saison · Tours</span>
+          </div>
+          <div class="about-box__content">
+            <h3 class="about-box__title">Quand le goût rencontre la convivialité</h3>
+            <p class="about-box__text">Au cœur de Tours, L'Épopée est né de l'envie de partager une cuisine sincère, faite de produits de saison et d'accords justes. Ici, pas de chichi : juste le goût, la convivialité, et le plaisir d'être ensemble autour d'une belle table. Notre équipe cuisine au rythme des saisons et des rencontres avec nos producteurs, pour des assiettes qui ont une âme.</p>
+            <a href="#apropos" class="btn btn--ghost">Découvrir notre histoire <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
+          </div>
+        </div>
+        <div class="highlights">
+          <div class="highlight"><h4 class="highlight__title">Produits de saison</h4><p class="highlight__desc">Ingrédients frais, choisis au marché chaque semaine</p></div>
+          <div class="highlight"><h4 class="highlight__title">Vignerons engagés</h4><p class="highlight__desc">Vins bios, nature et de vignerons passionnés</p></div>
+          <div class="highlight"><h4 class="highlight__title">Cuisine du marché</h4><p class="highlight__desc">Une carte qui change au fil des arrivages</p></div>
+          <div class="highlight"><h4 class="highlight__title">Ambiance chaleureuse</h4><p class="highlight__desc">Un cadre convivial, pour tous les moments</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS — Carousel ===== -->
+    <section class="section section--light">
+      <div class="section__inner">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">Ils sont passés à table</h2>
+          </div>
+          <p class="section-heading__subtitle">Des moments partagés, des assiettes qui parlent d'elles-mêmes</p>
+        </div>
+        <div class="testi-carousel" role="region" aria-label="Témoignages">
+          <div class="testi-carousel__track" id="testi-track">
+            <div class="testi-slide">
+              <div class="testi-slide__left">
+                <img class="testi-slide__avatar" src="./assets/images/ZedukbhAqTWzhWu7XgfHVuuBpc.png" alt="Sophie L." loading="lazy">
+                <h4 class="testi-slide__name">Sophie L.</h4>
+                <p class="testi-slide__role">Habituée</p>
+              </div>
+              <div class="testi-slide__right">
+                <img class="testi-slide__food" src="./assets/images/TH0dtcymw6YcwIqWLOAv7RnULQ.jpg" alt="Plat dégusté" loading="lazy">
+                <div class="testi-slide__stars">★★★★★</div>
+                <h4 class="testi-slide__quote">Un bistrot où l'on se sent comme chez soi</h4>
+                <p class="testi-slide__text">Cuisine franche, accueil impeccable, et cette carte des vins qui change tout le temps. On y retourne sans hésiter.</p>
+              </div>
+            </div>
+            <div class="testi-slide">
+              <div class="testi-slide__left">
+                <img class="testi-slide__avatar" src="./assets/images/VVmSiZIDXxbCfGHyCSKoc2Aa1Y.jpg" alt="Marc D." loading="lazy">
+                <h4 class="testi-slide__name">Marc D.</h4>
+                <p class="testi-slide__role">Gourmet</p>
+              </div>
+              <div class="testi-slide__right">
+                <img class="testi-slide__food" src="./assets/images/QIPl2NblrnOqeF4k5KDIOTv3Cs.jpg" alt="Vue du restaurant" loading="lazy">
+                <div class="testi-slide__stars">★★★★★</div>
+                <h4 class="testi-slide__quote">Le meilleur rapport qualité-prix de Tours</h4>
+                <p class="testi-slide__text">Les produits parlent d'eux-mêmes. Chaque assiette raconte une histoire, celle du marché et des producteurs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi-carousel__nav">
+            <button class="testi-arrow" id="testi-prev" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="testi-arrow" id="testi-next" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESERVATION — 2 colonnes ===== -->
+    <section id="reservation" class="section">
+      <div class="section__inner">
+        <div class="section-heading">
+          <div class="section-heading__row">
+            <div class="section-heading__line"></div>
+            <h2 class="section-heading__title">Réservez votre table</h2>
+          </div>
+          <p class="section-heading__subtitle">Une table à partager, une cuisine sincère, une cave choisie avec soin</p>
+        </div>
+        <div class="resa-box">
+          <div class="resa-box__image">
+            <img src="./assets/images/NmrgygAcnHyZ24XJ4polzeA08U.png" alt="Intérieur du restaurant" loading="lazy">
+          </div>
+          <div class="resa-box__content">
+            <h3 class="resa-box__title">Une soirée de saveurs, de convivialité et de bons vins vous attend</h3>
+            <div class="resa-box__hours">
+              <div><span class="resa-box__hour-label">Du mardi au samedi</span><br><span class="resa-box__hour-value">12h00 — 14h00 / 19h00 — 22h00</span></div>
+              <div><span class="resa-box__hour-label">Dimanche et lundi</span><br><span class="resa-box__hour-value">Fermé</span></div>
+            </div>
+            <div class="resa-box__address">Adresse à préciser, 37000 Tours<br><a href="tel:+33247000000">02 XX XX XX XX</a><br><a href="mailto:epopeetour@gmail.com">epopeetour@gmail.com</a></div>
+            <a href="tel:+33247000000" class="btn btn--primary">Réserver une table <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__col">
+          <h4 class="footer__col-title">Liens rapides</h4>
+          <a href="#accueil">Accueil</a>
+          <a href="#menu">Carte</a>
+          <a href="#ambiance">Ambiance</a>
+          <a href="#apropos">À propos</a>
+          <a href="#reservation">Réserver</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Pages utiles</h4>
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Suivez-nous</h4>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="footer__social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 L'Épopée — Tous droits réservés</span>
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="./js/main.js" defer></script>
 </body>
