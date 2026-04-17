@@ -188,33 +188,29 @@ body {
   flex-shrink: 0;
 }
 .btn__arrow svg { width: 20px; height: 20px; position: relative; z-index: 1; }
-/* .btn__arrow-bg is visually hidden — the real hover bg is ::after on .btn */
 .btn__arrow-bg {
   position: absolute;
   inset: 0;
   border-radius: 999px;
   background-color: rgba(44, 44, 44, 0.7);
+  transition: inset 0.4s cubic-bezier(0.12, 0.23, 0.5, 1),
+              border-radius 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
 
-/* Hover expand overlay — ::after on .btn (z-index 0, under text) */
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
-  z-index: 0;
-  pointer-events: none;
+/* Hover: circle expands to cover entire button (Savoria effect) */
+.btn:hover .btn__arrow-bg {
+  inset: -74px -89px -83px -210px;
+  border-radius: 4px;
 }
-.btn:hover::after { opacity: 1; }
-.btn--primary::after { background-color: rgba(0, 0, 0, 0.25); }
-
-/* Text + arrow ABOVE overlay (z-index 1) */
-.btn__text { position: relative; z-index: 1; }
-.btn__arrow { position: relative; z-index: 1; }
+/* Text + arrow icon stay above expanding bg */
+.btn__text {
+  position: relative;
+  z-index: 1;
+}
+.btn__arrow {
+  z-index: 1;
+}
 /* Arrow icon rotates 45deg: diagonal ↗ becomes horizontal → */
 .btn__arrow svg {
   transition: transform 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
