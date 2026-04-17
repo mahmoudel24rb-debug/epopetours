@@ -422,4 +422,54 @@ body {
   .section-container { padding: 0 20px; }
 }
 
-/* Placeholder for remaining sections — added after hero validation */
+/* ========================================
+   MARQUEE TEXTE — L'ÉPOPÉE
+   ======================================== */
+.marquee {
+  overflow: hidden;
+  padding: 32px 0;
+  background-color: var(--color-dark);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.marquee__word {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 7vw, 90px);
+  line-height: 1.2em;
+  letter-spacing: -0.3px;
+  color: var(--color-light);
+}
+
+.marquee__sep {
+  color: var(--color-cta);
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 1;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation-play-state: paused; }
+}
+
+/* Placeholder for remaining sections */
