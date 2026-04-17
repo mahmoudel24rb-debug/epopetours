@@ -20,7 +20,7 @@
 
   <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/google-6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib14c7qv8.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="./assets/fonts/vQyevYAyHtARFwPqUzQGpnDs.woff2">
-  <link rel="preload" as="image" href="./assets/images/Hero.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero v2.jpg">
 
   <link rel="stylesheet" href="./css/style.css">
 
@@ -32,7 +32,7 @@
     "description": "Bistrot convivial à Tours — cuisine de saison, produits du marché et sélection de vins de vignerons.",
     "telephone": "+33247000000",
     "email": "epopeetour@gmail.com",
-    "address": { "@type": "PostalAddress", "streetAddress": "Adresse à préciser", "addressLocality": "Tours", "postalCode": "37000", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "80 rue Colbert", "addressLocality": "Tours", "postalCode": "37000", "addressCountry": "FR" },
     "servesCuisine": "French bistro",
     "priceRange": "€€",
     "openingHoursSpecification": [
@@ -91,7 +91,7 @@
 
       <!-- Image fond — absolute, côté droit, masque radial -->
       <div class="hero__bg">
-        <img src="./assets/images/Hero.jpg"
+        <img src="./assets/images/hero v2.jpg"
              alt="Intérieur du restaurant L'Épopée à Tours"
              fetchpriority="high">
       </div>
@@ -143,7 +143,7 @@
     </section>
 
     <!-- ===== MENU — 2 colonnes tabs ===== -->
-    <section id="menu" class="section">
+    <section id="menu" class="section section--dark">
       <div class="section__inner">
         <div class="section-heading fade-in">
           <div class="section-heading__row">
@@ -318,7 +318,7 @@
     </section>
 
     <!-- ===== RESERVATION — Savoria exact: image absolute droite + contenu gauche bordé ===== -->
-    <section id="reservation" class="section">
+    <section id="reservation" class="section section--dark">
       <div class="section__inner">
         <div class="about-heading fade-in">
           <div class="section-heading__row">
@@ -349,7 +349,7 @@
               </div>
               <div class="resa__address-block">
                 <span class="resa__label">Adresse</span>
-                <span class="resa__value">Adresse à préciser, 37000 Tours</span>
+                <span class="resa__value">80 rue Colbert, 37000 Tours</span>
               </div>
             </div>
             <a href="tel:+33247000000" class="btn btn--primary">Réserver une table <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
@@ -395,7 +395,7 @@
       </div>
       <div class="footer__bottom">
         <span>© 2026 L'Épopée — Tous droits réservés</span>
-        <span>Site réalisé avec passion</span>
+        <a href="https://dgl.agency" target="_blank" rel="noopener">DGL AGENCY</a>
       </div>
     </div>
   </footer>

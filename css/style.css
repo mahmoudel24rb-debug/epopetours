@@ -23,6 +23,7 @@ input, textarea, select { font: inherit; }
   --color-light:  #FFFFFF;
   --color-muted:  #6b6b6b;
   --color-border: rgba(188, 188, 188, 0.16);
+  --color-border-light: rgba(0, 0, 0, 0.1);
   --font-display: 'Fraunces', 'Fraunces Placeholder', serif;
   --font-body:    'Inter', 'Inter Placeholder', sans-serif;
 }
@@ -67,7 +68,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: var(--color-text);
-  background-color: var(--color-dark);
+  background-color: var(--color-bg);
 }
 
 /* --- Accessibility --- */
@@ -171,10 +172,13 @@ body {
 
 .btn--ghost {
   background-color: transparent;
-  color: var(--color-light);
+  color: var(--color-text);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(4px);
 }
+.section--dark .btn--ghost,
+.hero .btn--ghost,
+.nav .btn--ghost { color: var(--color-light); }
 
 .btn__arrow {
   width: 34px; height: 34px;
@@ -445,9 +449,10 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-color: var(--color-dark);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
-.section--light { background-color: var(--color-bg); }
+.section--dark { background-color: var(--color-dark); color: var(--color-light); }
 @media (max-width: 809px) { .section { padding: 60px 20px; } }
 
 .section__inner {
@@ -482,18 +487,18 @@ body {
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: -0.3px;
-  color: var(--color-light);
+  color: var(--color-text);
 }
-.section--light .section-heading__title { color: var(--color-text); }
+.section--dark .section-heading__title { color: var(--color-light); }
 .section-heading__subtitle {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
   max-width: 600px;
 }
-.section--light .section-heading__subtitle { color: var(--color-muted); }
+.section--dark .section-heading__subtitle { color: rgba(255, 249, 243, 0.7); }
 @media (max-width: 1199px) { .section-heading__title { font-size: 32px; } }
 @media (max-width: 809px) { .section-heading__title { font-size: 28px; } }
 
@@ -565,7 +570,7 @@ body {
   font-weight: 500;
   line-height: 1.4em;
   letter-spacing: -0.03em;
-  color: var(--color-light);
+  color: inherit;
   margin-bottom: 4px;
 }
 .menu__item-desc {
@@ -573,11 +578,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
 }
+.section--dark .menu__item-desc { color: rgba(255, 249, 243, 0.7); }
 .menu__item-arrow {
   width: 24px; height: 24px;
-  color: var(--color-light);
+  color: inherit;
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
@@ -777,8 +783,9 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
 }
+.section--dark .about-content__text { color: rgba(255, 249, 243, 0.7); }
 @media (max-width: 809px) {
   .about-content { padding: 12px; }
   .about-content__top { flex-direction: column; }
@@ -808,7 +815,7 @@ body {
   font-weight: 400;
   line-height: 1.4em;
   letter-spacing: 0.1px;
-  color: var(--color-light);
+  color: inherit;
   text-align: center;
 }
 .highlight__desc {
@@ -816,7 +823,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4em;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
   text-align: center;
 }
 @media (max-width: 1199px) {
@@ -867,12 +874,12 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-light);
+  color: inherit;
 }
 .testi-card__role {
   font-family: var(--font-body);
   font-size: 14px;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
 }
 /* Portrait image below profile */
 .testi-card__image {
@@ -899,14 +906,16 @@ body {
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: -0.3px;
-  color: var(--color-light);
+  color: var(--color-text);
 }
 .testi-card__text {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.4em;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
 }
+.section--dark .testi-card__title { color: var(--color-light); }
+.section--dark .testi-card__text { color: rgba(255, 249, 243, 0.7); }
 @media (max-width: 1199px) {
   .testi-card__title { font-size: 32px; }
 }
@@ -997,8 +1006,9 @@ body {
 .resa__value {
   font-family: var(--font-body);
   font-size: 16px;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
 }
+.section--dark .resa__value { color: rgba(255, 249, 243, 0.7); }
 .resa__address-block {
   display: flex;
   flex-direction: column;
