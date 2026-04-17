@@ -42,36 +42,46 @@
 /* ========================================
    Hero — 2 colonnes (fidèle Savoria)
    ======================================== */
+/* ========================================
+   Hero — Valeurs exactes Savoria
+   ======================================== */
 .hero {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
   min-height: 100svh;
   background-color: var(--color-bg);
   overflow: hidden;
 }
 
+/* Colonne gauche */
 .hero__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 80px 48px 48px;
+  justify-content: flex-end;
+  padding: 80px 60px 60px;
   position: relative;
   z-index: 2;
+  max-width: 600px;
+  margin-left: auto;
+  gap: 36px;
 }
 
+/* 3 assiettes rondes — tailles exactes Savoria (184-189px) */
 .hero__dishes {
   display: flex;
   align-items: center;
-  margin-bottom: auto;
+  position: absolute;
+  top: 100px;
+  left: 60px;
 }
 
 .hero__dish {
-  width: 140px;
-  height: 140px;
+  width: 184px;
+  height: 184px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--color-border);
+  border: 3px solid rgba(255, 249, 243, 0.2);
   flex-shrink: 0;
   filter: brightness(0.95);
 }
@@ -83,48 +93,50 @@
 }
 
 .hero__dish:nth-child(1) { transform: rotate(-2deg); z-index: 3; }
-.hero__dish:nth-child(2) { transform: rotate(-6deg); margin-left: -24px; z-index: 2; }
-.hero__dish:nth-child(3) { transform: rotate(15deg); margin-left: -24px; z-index: 1; }
+.hero__dish:nth-child(2) { width: 189px; height: 189px; transform: rotate(-6deg); margin-left: -30px; z-index: 2; }
+.hero__dish:nth-child(3) { width: 170px; height: 170px; transform: rotate(15deg); margin-left: -30px; z-index: 1; }
 
+/* Texte + CTAs — en bas de la colonne */
 .hero__text {
-  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .hero .badge {
-  margin-bottom: var(--space-6);
+  color: var(--color-fg-muted);
 }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: var(--fs-hero);
-  font-weight: 400;
-  line-height: 1.05;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.2em;
   color: var(--color-fg);
-  margin-bottom: var(--space-6);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.3px;
 }
 
 .hero__title em {
   font-style: italic;
-  font-weight: 500;
 }
 
 .hero__subtitle {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-  color: var(--color-fg-muted);
-  line-height: 1.6;
-  max-width: 450px;
-  margin-bottom: var(--space-8);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(245, 235, 224, 0.7);
+  line-height: 1.4em;
+  max-width: 480px;
 }
 
 .hero__ctas {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: 24px;
   flex-wrap: wrap;
 }
 
+/* Colonne droite — image bord à bord */
 .hero__image {
   position: relative;
   overflow: hidden;
@@ -142,17 +154,21 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 35%;
+  width: 30%;
   height: 100%;
   background: linear-gradient(to right, var(--color-bg), transparent);
   z-index: 1;
   pointer-events: none;
 }
 
+/* ---- Hero responsive ---- */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 50% 50%; }
-  .hero__content { padding: 80px 32px 32px; }
-  .hero__dish { width: 110px; height: 110px; }
+  .hero__content { padding: 80px 40px 40px; gap: 32px; }
+  .hero__dishes { top: 90px; left: 40px; }
+  .hero__dish { width: 140px; height: 140px; }
+  .hero__dish:nth-child(2) { width: 145px; height: 145px; margin-left: -20px; }
+  .hero__dish:nth-child(3) { width: 130px; height: 130px; margin-left: -20px; }
+  .hero__title { font-size: clamp(32px, 4.5vw, 44px); }
 }
 
 @media (max-width: 768px) {
@@ -168,9 +184,19 @@
     bottom: 0;
     background: linear-gradient(to top, var(--color-bg), transparent);
   }
-  .hero__content { padding: var(--space-8) var(--space-6) var(--space-12); }
-  .hero__dishes { margin-bottom: var(--space-8); }
-  .hero__dish { width: 90px; height: 90px; }
+  .hero__content {
+    padding: var(--space-8) var(--space-6) var(--space-12);
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .hero__dishes {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .hero__dish { width: 100px; height: 100px; }
+  .hero__dish:nth-child(2) { width: 105px; height: 105px; }
+  .hero__dish:nth-child(3) { width: 95px; height: 95px; }
 }
 
 @media (max-width: 480px) {
