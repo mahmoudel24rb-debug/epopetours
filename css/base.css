@@ -1,0 +1,370 @@
+/* ========================================
+   @font-face
+   ======================================== */
+
+/* Fraunces — Regular (variable weight 100–900) */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib14c7qv8.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib14c0qv86Rg.woff2') format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib14c1qv86Rg.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* Fraunces — Italic (variable weight 100–900) */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUs8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9mv0iQg.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUs8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9mvIiQvTm.woff2') format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/google-6NUs8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9mvMiQvTm.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* Inter — subsets from Framer CDN */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2') format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Placeholders (fallback subsets) */
+@font-face {
+  font-family: 'Fraunces Placeholder';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Placeholder';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/EOr0mi4hNtlgWNn9if640EZzXCo.woff2') format('woff2');
+}
+
+/* ========================================
+   Body
+   ======================================== */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-fg);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  line-height: 1.6;
+  color: var(--color-fg-muted);
+}
+
+/* Section clair — texte inversé */
+.section--light h1,
+.section--light h2,
+.section--light h3,
+.section--light h4 {
+  color: var(--color-fg-alt);
+}
+
+.section--light p {
+  color: var(--color-fg-muted-alt);
+}
+
+/* ========================================
+   Layout
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+/* ========================================
+   Sections
+   ======================================== */
+.section {
+  padding: var(--space-24) 0;
+}
+
+@media (min-width: 768px) {
+  .section { padding: var(--space-32) 0; }
+}
+
+.section--dark  { background-color: var(--color-bg); }
+.section--light { background-color: var(--color-bg-alt); }
+.section--deep  { background-color: var(--color-bg-deep); }
+
+/* ========================================
+   Section Header (label + titre + sous-titre)
+   ======================================== */
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section__header--left {
+  text-align: left;
+}
+
+.section__header h2 {
+  margin-top: var(--space-4);
+}
+
+.section__header p {
+  margin-top: var(--space-4);
+  max-width: 600px;
+}
+
+.section__header:not(.section__header--left) p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   Badge (label de section)
+   ======================================== */
+.badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-fg-muted);
+}
+
+.section--light .badge,
+.badge--alt {
+  color: var(--color-fg-muted-alt);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 1;
+  padding: var(--space-3) var(--space-8);
+  border-radius: var(--radius-full);
+  transition: background-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Primary — rouge plein */
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: 1px solid var(--color-accent);
+}
+.btn--primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Ghost — outline sur fond sombre */
+.btn--ghost {
+  background-color: transparent;
+  color: var(--color-fg);
+  border: 1px solid var(--color-fg);
+}
+.btn--ghost:hover {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+}
+
+/* Ghost sur fond clair */
+.btn--ghost-alt {
+  background-color: transparent;
+  color: var(--color-fg-alt);
+  border: 1px solid var(--color-fg-alt);
+}
+.btn--ghost-alt:hover {
+  background-color: var(--color-fg-alt);
+  color: var(--color-bg-alt);
+}
+
+/* Link — texte simple + flèche */
+.btn--link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-fg);
+  font-weight: 400;
+  border-radius: 0;
+  position: relative;
+}
+.btn--link::after {
+  content: ' →';
+  transition: transform var(--dur-fast) var(--ease-out);
+  display: inline-block;
+}
+.btn--link:hover::after {
+  transform: translateX(4px);
+}
+.btn--link:hover {
+  color: var(--color-accent);
+}
+
+.section--light .btn--link {
+  color: var(--color-fg-alt);
+}
+.section--light .btn--link:hover {
+  color: var(--color-accent);
+}
+
+/* ========================================
+   Grids
+   ======================================== */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2x2 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid--2x2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.grid--footer {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid--footer { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid--footer { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+}
+
+/* ========================================
+   Accessibility
+   ======================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Reduced motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

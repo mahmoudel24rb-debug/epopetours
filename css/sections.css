@@ -1,0 +1,245 @@
+/* ========================================
+   Hero
+   ======================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-32) 0 var(--space-16);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 22, 19, 0.55) 0%,
+    rgba(26, 22, 19, 0.25) 40%,
+    rgba(26, 22, 19, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero .badge {
+  margin-bottom: var(--space-6);
+  color: var(--color-fg-muted);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--color-fg);
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+.hero__title em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  color: var(--color-fg-muted);
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto var(--space-8);
+}
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   Hero responsive
+   ======================================== */
+@media (max-width: 640px) {
+  .hero {
+    padding: var(--space-24) var(--space-4) var(--space-12);
+  }
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero__ctas .btn {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   Philosophie
+   ======================================== */
+.philosophie {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.philosophie__content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.philosophie__content .badge {
+  margin-bottom: var(--space-4);
+}
+
+.philosophie__content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.philosophie__content p {
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+}
+
+.philosophie__media {
+  flex: 1;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.philosophie__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+@media (max-width: 768px) {
+  .philosophie {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  .philosophie__content {
+    text-align: center;
+    max-width: 100%;
+  }
+  .philosophie__media {
+    max-width: 100%;
+    width: 100%;
+  }
+  .philosophie__media img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ========================================
+   Notre Carte
+   ======================================== */
+.carte-section .grid--2x2 {
+  gap: var(--space-8);
+}
+
+/* ========================================
+   Plats signatures (marquee section)
+   ======================================== */
+.plats-section .section__header {
+  margin-bottom: var(--space-8);
+}
+
+/* ========================================
+   Ambiance (gallery section)
+   ======================================== */
+.ambiance-section .gallery {
+  margin-top: var(--space-4);
+}
+
+/* ========================================
+   Histoire + Atouts
+   ======================================== */
+.histoire {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.histoire__content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.histoire__content .badge {
+  margin-bottom: var(--space-4);
+}
+
+.histoire__content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.histoire__content p {
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+}
+
+.histoire__media {
+  flex: 1;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.histoire__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 768px) {
+  .histoire {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  .histoire__content {
+    text-align: center;
+    max-width: 100%;
+  }
+  .histoire__media {
+    max-width: 100%;
+    width: 100%;
+  }
+  .histoire__media img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.atouts-section {
+  padding-top: 0;
+}
+
+.atouts-section .grid--4 {
+  gap: var(--space-4);
+}

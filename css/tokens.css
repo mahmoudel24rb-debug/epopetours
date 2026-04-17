@@ -1,0 +1,61 @@
+/* ========================================
+   Design Tokens — L'Épopée
+   Direction "Bistrot chic sombre"
+   ======================================== */
+:root {
+  /* Fonds */
+  --color-bg:          #1a1613;
+  --color-bg-alt:      #faf5ed;
+  --color-bg-deep:     #0f0b09;
+
+  /* Textes */
+  --color-fg:          #f5ebe0;
+  --color-fg-alt:      #2a1f1a;
+  --color-fg-muted:    #a8998b;
+  --color-fg-muted-alt:#6b5d52;
+
+  /* Accent — Rouge L'Épopée */
+  --color-accent:      #c41e1e;
+  --color-accent-hover:#a01818;
+  --color-accent-soft: #f4d4d4;
+
+  /* Bordures */
+  --color-border:      rgba(245, 235, 224, 0.12);
+  --color-border-alt:  rgba(42, 31, 26, 0.12);
+
+  /* Typographie */
+  --font-display: 'Fraunces', 'Fraunces Placeholder', serif;
+  --font-body:    'Inter', 'Inter Placeholder', sans-serif;
+
+  /* Échelles typo */
+  --fs-hero:  clamp(2.5rem, 5vw + 1rem, 5.5rem);
+  --fs-h1:    clamp(2rem, 3vw + 1rem, 3.5rem);
+  --fs-h2:    clamp(1.5rem, 2vw + 0.75rem, 2.5rem);
+  --fs-h3:    clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+  --fs-body:  1rem;
+  --fs-small: 0.875rem;
+
+  /* Espacements */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Rayons */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.12, 0.23, 0.5, 1);
+  --dur-fast: 200ms;
+  --dur-med:  400ms;
+  --dur-slow: 700ms;
+}
