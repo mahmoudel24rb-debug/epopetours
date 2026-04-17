@@ -293,7 +293,7 @@ body {
   display: flex;
   flex: 1 0 0;
   max-width: 512px;
-  min-height: 218px;
+  min-height: 300px;
   align-items: center;
   justify-content: center;
   position: relative;
