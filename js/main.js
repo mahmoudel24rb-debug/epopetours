@@ -50,5 +50,17 @@
     });
   }
 
-  /* Testimonials: pas de carousel, 2 cards côte à côte (Savoria) */
+  /* Scroll animations — fade-in via IntersectionObserver */
+  var fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(function (el) { observer.observe(el); });
+  }
 })();

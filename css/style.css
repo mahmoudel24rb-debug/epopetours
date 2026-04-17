@@ -516,6 +516,13 @@ body {
   .about-heading .section-heading__subtitle { text-align: left; }
 }
 
+/* Menu separator line after heading */
+.menu__separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
 /* ========================================
    MENU — 2 colonnes tabs (Savoria)
    ======================================== */
@@ -1006,19 +1013,22 @@ body {
 }
 
 /* ========================================
-   FOOTER (Savoria)
+   FOOTER — Savoria exact structure
+   Top: 2 link columns + newsletter + socials
+   Links as bordered buttons with arrow icon
+   Bottom: copyright bar with border-top
    ======================================== */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px 40px;
-  background-color: var(--color-dark);
-  border-top: 1px solid var(--color-border);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0;
 }
 .footer__inner {
   max-width: 1200px;
   width: 100%;
+  padding: 80px 40px 40px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -1026,35 +1036,102 @@ body {
 .footer__top {
   display: flex;
   gap: 48px;
-  justify-content: space-between;
+  align-items: flex-start;
 }
-.footer__col { display: flex; flex-direction: column; gap: 12px; }
+/* Link columns */
+.footer__links-group {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+.footer__col { display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .footer__col-title {
   font-family: var(--font-body);
   font-size: 16px;
-  font-weight: 500;
-  color: var(--color-light);
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: var(--color-cta);
   margin-bottom: 8px;
 }
-.footer__col a {
+/* Footer link buttons — bordered with arrow (Savoria exact) */
+.footer__link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid rgba(44, 44, 44, 0.7);
+  border-radius: 4px;
+  backdrop-filter: blur(2px);
   font-family: var(--font-body);
   font-size: 16px;
-  color: rgba(255, 249, 243, 0.7);
-  padding: 6px 0;
-  transition: color 0.2s ease;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: rgba(212, 212, 212, 0.7);
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
-.footer__col a:hover { color: var(--color-cta); }
-.footer__socials { display: flex; gap: 12px; margin-top: 8px; }
-.footer__social {
-  width: 36px; height: 36px;
-  border-radius: 50%;
+.footer__link-btn:hover { color: var(--color-cta); border-color: var(--color-cta); }
+.footer__link-btn svg {
+  width: 16px; height: 16px;
+  color: var(--color-cta);
+  flex-shrink: 0;
+}
+/* Newsletter */
+.footer__newsletter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__newsletter-title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-cta);
+  margin-bottom: 4px;
+}
+.footer__newsletter-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 249, 243, 0.7);
+  line-height: 1.4em;
+}
+.footer__newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+.footer__newsletter-input {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--color-dark);
   border: 1px solid var(--color-border);
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(255, 249, 243, 0.7);
-  transition: all 0.2s ease;
+  border-radius: 4px;
+  color: var(--color-cta);
+  font-size: 14px;
 }
-.footer__social:hover { background: var(--color-cta); border-color: var(--color-cta); color: #fff; }
-.footer__social svg { width: 16px; height: 16px; }
+.footer__newsletter-input::placeholder { color: rgba(255, 249, 243, 0.2); }
+.footer__newsletter-input:focus { outline: none; border-color: var(--color-cta); }
+.footer__newsletter-submit {
+  width: 44px; height: 44px;
+  border: 1px solid rgba(44, 44, 44, 0.7);
+  border-radius: 4px;
+  background: var(--color-dark);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(214, 209, 206, 1);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.footer__newsletter-submit:hover { background: var(--color-cta); border-color: var(--color-cta); color: #fff; }
+.footer__newsletter-submit svg { width: 18px; height: 18px; }
+/* Social icons row */
+.footer__socials { display: flex; gap: 16px; margin-top: 12px; }
+.footer__social {
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-cta);
+  transition: opacity 0.2s ease;
+}
+.footer__social:hover { opacity: 0.7; }
+.footer__social svg { width: 24px; height: 24px; }
+/* Bottom bar */
 .footer__bottom {
   display: flex;
   justify-content: space-between;
@@ -1065,10 +1142,31 @@ body {
   font-size: 14px;
   color: rgba(255, 249, 243, 0.7);
 }
-.footer__bottom a { color: rgba(255, 249, 243, 0.7); }
-.footer__bottom a:hover { color: var(--color-cta); }
 @media (max-width: 809px) {
-  .footer { padding: 60px 20px 30px; }
+  .footer__inner { padding: 60px 20px 30px; }
   .footer__top { flex-direction: column; gap: 32px; }
+  .footer__links-group { flex-direction: column; }
   .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+/* ========================================
+   ANIMATIONS — Fade-in au scroll (IntersectionObserver)
+   ======================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.12, 0.23, 0.5, 1),
+              transform 0.8s cubic-bezier(0.12, 0.23, 0.5, 1);
+}
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger delays for children */
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
 }

@@ -145,14 +145,15 @@
     <!-- ===== MENU — 2 colonnes tabs ===== -->
     <section id="menu" class="section">
       <div class="section__inner">
-        <div class="section-heading">
+        <div class="section-heading fade-in">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">Notre carte</h2>
           </div>
           <p class="section-heading__subtitle">Une carte qui évolue au fil des saisons et des arrivages du marché</p>
         </div>
-        <div class="menu" id="menu-tabs">
+        <div class="menu__separator"></div>
+        <div class="menu fade-in" id="menu-tabs">
           <div class="menu__left">
             <div class="menu__categories">
               <a class="menu__item is-active" data-menu="0" href="#menu">
@@ -202,7 +203,7 @@
     <!-- ===== AMBIANCE — Carousel (Savoria: fond sombre) ===== -->
     <section id="ambiance" class="section" style="padding-left:0;padding-right:0;">
       <div class="section__inner" style="padding:0 40px;">
-        <div class="section-heading">
+        <div class="section-heading fade-in">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">L'ambiance</h2>
@@ -232,7 +233,7 @@
     <section id="apropos" class="section">
       <div class="section__inner">
         <!-- Heading row: titre gauche + sous-titre droite -->
-        <div class="about-heading">
+        <div class="about-heading fade-in">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">Notre histoire</h2>
@@ -241,7 +242,7 @@
         </div>
 
         <!-- Content box bordé: image gauche (flex row) + texte droite -->
-        <div class="about-content">
+        <div class="about-content fade-in">
           <div class="about-content__top">
             <figure class="about-content__image">
               <img src="./assets/images/XPuqH8MPUNYomlKhRjraucjKGsc.png" alt="L'Épopée restaurant" loading="lazy">
@@ -259,7 +260,7 @@
             </div>
           </div>
           <!-- 4 highlights en row -->
-          <div class="highlights">
+          <div class="highlights fade-in">
             <div class="highlight"><h4 class="highlight__title">Produits de saison</h4><p class="highlight__desc">Ingrédients frais, choisis au marché chaque semaine</p></div>
             <div class="highlight"><h4 class="highlight__title">Vignerons engagés</h4><p class="highlight__desc">Vins bios, nature et de vignerons passionnés</p></div>
             <div class="highlight"><h4 class="highlight__title">Cuisine du marché</h4><p class="highlight__desc">Une carte qui change au fil des arrivages</p></div>
@@ -272,14 +273,14 @@
     <!-- ===== TESTIMONIALS — 2 cards côte à côte (Savoria exact) ===== -->
     <section class="section">
       <div class="section__inner">
-        <div class="about-heading">
+        <div class="about-heading fade-in">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">Ils sont passés à table</h2>
           </div>
           <p class="section-heading__subtitle">Des moments partagés, des assiettes qui parlent d'elles-mêmes</p>
         </div>
-        <div class="testi-container">
+        <div class="testi-container fade-in">
           <!-- Card 1 -->
           <div class="testi-card">
             <div class="testi-card__profile">
@@ -319,7 +320,7 @@
     <!-- ===== RESERVATION — Savoria exact: image absolute droite + contenu gauche bordé ===== -->
     <section id="reservation" class="section">
       <div class="section__inner">
-        <div class="about-heading">
+        <div class="about-heading fade-in">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">Réservez votre table</h2>
@@ -327,7 +328,7 @@
           <p class="section-heading__subtitle">Une table à partager, une cuisine sincère, une cave choisie avec soin</p>
         </div>
         <!-- Resa container: image absolute droite + contenu gauche -->
-        <div class="resa">
+        <div class="resa fade-in">
           <!-- Image absolute droite avec mask gradient -->
           <figure class="resa__image">
             <img src="./assets/images/uJ8s5QaULeThA2JRoHUeOECmuM.png" alt="Intérieur du restaurant" loading="lazy">
@@ -359,34 +360,42 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER — Savoria exact ===== -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__top">
-        <div class="footer__col">
-          <h4 class="footer__col-title">Liens rapides</h4>
-          <a href="#accueil">Accueil</a>
-          <a href="#menu">Carte</a>
-          <a href="#ambiance">Ambiance</a>
-          <a href="#apropos">À propos</a>
-          <a href="#reservation">Réserver</a>
+        <div class="footer__links-group">
+          <div class="footer__col">
+            <p class="footer__col-title">Liens rapides</p>
+            <a href="#accueil" class="footer__link-btn">Accueil <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+            <a href="#menu" class="footer__link-btn">Carte <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+            <a href="#apropos" class="footer__link-btn">À propos <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+            <a href="#reservation" class="footer__link-btn">Réserver <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Pages utiles</p>
+            <a href="#" class="footer__link-btn">Mentions légales <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+            <a href="#" class="footer__link-btn">Confidentialité <svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg></a>
+          </div>
         </div>
-        <div class="footer__col">
-          <h4 class="footer__col-title">Pages utiles</h4>
-          <a href="#">Mentions légales</a>
-          <a href="#">Politique de confidentialité</a>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__col-title">Suivez-nous</h4>
+        <div class="footer__newsletter">
+          <p class="footer__newsletter-title">Newsletter</p>
+          <p class="footer__newsletter-text">Inscrivez-vous pour recevoir nos actualités et événements, directement dans votre boîte mail.</p>
+          <form class="footer__newsletter-form" onsubmit="return false;">
+            <input type="email" class="footer__newsletter-input" placeholder="votre@email.com">
+            <button type="submit" class="footer__newsletter-submit" aria-label="Envoyer"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></button>
+          </form>
           <div class="footer__socials">
-            <a href="#" class="footer__social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" class="footer__social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="footer__social" aria-label="Instagram"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+            <a href="#" class="footer__social" aria-label="LinkedIn"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg></a>
+            <a href="#" class="footer__social" aria-label="Facebook"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+            <a href="#" class="footer__social" aria-label="X"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"/></svg></a>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 L'Épopée — Tous droits réservés</span>
-        <a href="#">Mentions légales</a>
+        <span>Site réalisé avec passion</span>
       </div>
     </div>
   </footer>
