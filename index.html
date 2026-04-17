@@ -228,35 +228,43 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT — Savoria exact: heading row + 2-col box + highlights ===== -->
+    <!-- ===== ABOUT US — Savoria exact structure ===== -->
     <section id="apropos" class="section">
       <div class="section__inner">
-        <!-- Heading: titre gauche + sous-titre droite (Savoria layout) -->
+        <!-- Heading row: titre gauche + sous-titre droite -->
         <div class="about-heading">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
             <h2 class="section-heading__title">Notre histoire</h2>
           </div>
-          <p class="section-heading__subtitle">Découvrez l'histoire derrière notre passion pour une cuisine sincère et une ambiance conviviale.</p>
+          <p class="section-heading__subtitle">Découvrez l'histoire derrière notre passion pour une cuisine sincère et une ambiance conviviale</p>
         </div>
-        <!-- 2-col box: image gauche + texte droite -->
-        <div class="about-box">
-          <div class="about-box__image">
-            <img src="./assets/images/adA3ca5MJSdYVtT9ZmtqJigs.jpg" alt="L'équipe de L'Épopée" loading="lazy">
-            <span class="about-box__badge">Bistrot de saison · Tours</span>
+
+        <!-- Content box bordé: image gauche (flex row) + texte droite -->
+        <div class="about-content">
+          <div class="about-content__top">
+            <figure class="about-content__image">
+              <img src="./assets/images/XPuqH8MPUNYomlKhRjraucjKGsc.png" alt="L'Épopée restaurant" loading="lazy">
+            </figure>
+            <div class="about-content__right">
+              <!-- Tag badge -->
+              <div class="about-content__tag">
+                <svg viewBox="0 0 256 256" fill="currentColor" style="width:20px;height:20px;color:var(--color-cta);flex-shrink:0;"><path d="M220,96A92,92,0,1,0,68,165.69V240a12,12,0,0,0,17.37,10.73L128,229.42l42.64,21.31A12,12,0,0,0,188,240V165.69A91.86,91.86,0,0,0,220,96ZM60,96a68,68,0,1,1,68,68A68.07,68.07,0,0,1,60,96ZM164,220.59l-30.64-15.32a12,12,0,0,0-10.74,0L92,220.58V180.66a92,92,0,0,0,72,0ZM128,148A52,52,0,1,0,76,96,52.06,52.06,0,0,0,128,148Zm0-80a28,28,0,1,1-28,28A28,28,0,0,1,128,68Z"/></svg>
+                <span>Bistrot de saison, Tours</span>
+              </div>
+              <!-- Titre en couleur accent -->
+              <h2 class="about-content__title">Quand le goût rencontre la convivialité</h2>
+              <p class="about-content__text">"Au cœur de Tours, L'Épopée est né de l'envie de partager une cuisine sincère, faite de produits de saison et d'accords justes — où chaque chapitre est servi avec passion.</p>
+              <a href="#apropos" class="btn btn--ghost">Découvrir notre histoire <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
+            </div>
           </div>
-          <div class="about-box__content">
-            <h3 class="about-box__title">Quand le goût rencontre la convivialité</h3>
-            <p class="about-box__text">Au cœur de Tours, L'Épopée est né de l'envie de partager une cuisine sincère, faite de produits de saison et d'accords justes. Ici, pas de chichi : juste le goût, la convivialité, et le plaisir d'être ensemble autour d'une belle table.</p>
-            <a href="#apropos" class="btn btn--ghost">Découvrir notre histoire <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
+          <!-- 4 highlights en row -->
+          <div class="highlights">
+            <div class="highlight"><h4 class="highlight__title">Produits de saison</h4><p class="highlight__desc">Ingrédients frais, choisis au marché chaque semaine</p></div>
+            <div class="highlight"><h4 class="highlight__title">Vignerons engagés</h4><p class="highlight__desc">Vins bios, nature et de vignerons passionnés</p></div>
+            <div class="highlight"><h4 class="highlight__title">Cuisine du marché</h4><p class="highlight__desc">Une carte qui change au fil des arrivages</p></div>
+            <div class="highlight"><h4 class="highlight__title">Ambiance chaleureuse</h4><p class="highlight__desc">Un cadre convivial, pour tous les moments</p></div>
           </div>
-        </div>
-        <!-- 4 highlights en row -->
-        <div class="highlights">
-          <div class="highlight"><h4 class="highlight__title">Produits de saison</h4><p class="highlight__desc">Ingrédients frais, choisis au marché chaque semaine</p></div>
-          <div class="highlight"><h4 class="highlight__title">Vignerons engagés</h4><p class="highlight__desc">Vins bios, nature et de vignerons passionnés</p></div>
-          <div class="highlight"><h4 class="highlight__title">Cuisine du marché</h4><p class="highlight__desc">Une carte qui change au fil des arrivages</p></div>
-          <div class="highlight"><h4 class="highlight__title">Ambiance chaleureuse</h4><p class="highlight__desc">Un cadre convivial, pour tous les moments</p></div>
         </div>
       </div>
     </section>
@@ -308,10 +316,9 @@
       </div>
     </section>
 
-    <!-- ===== RESERVATION — Savoria exact: heading + 2-col (contenu gauche, image droite) ===== -->
+    <!-- ===== RESERVATION — Savoria exact: image absolute droite + contenu gauche bordé ===== -->
     <section id="reservation" class="section">
       <div class="section__inner">
-        <!-- Heading row -->
         <div class="about-heading">
           <div class="section-heading__row">
             <div class="section-heading__line"></div>
@@ -319,28 +326,32 @@
           </div>
           <p class="section-heading__subtitle">Une table à partager, une cuisine sincère, une cave choisie avec soin</p>
         </div>
-        <!-- 2-col: contenu gauche + image droite (Savoria) -->
-        <div class="resa-box">
-          <div class="resa-box__content">
-            <h3 class="resa-box__title">Une soirée de saveurs, de convivialité et de bons vins vous attend</h3>
-            <div class="resa-box__hours-grid">
-              <div class="resa-box__hour-col">
-                <span class="resa-box__hour-label">Du mardi au samedi</span>
-                <span class="resa-box__hour-value">12h00 — 14h00 / 19h00 — 22h00</span>
+        <!-- Resa container: image absolute droite + contenu gauche -->
+        <div class="resa">
+          <!-- Image absolute droite avec mask gradient -->
+          <figure class="resa__image">
+            <img src="./assets/images/uJ8s5QaULeThA2JRoHUeOECmuM.png" alt="Intérieur du restaurant" loading="lazy">
+          </figure>
+          <!-- Contenu gauche dans box bordé -->
+          <div class="resa__left">
+            <h2 class="resa__title">Une soirée de saveurs, de convivialité et de bons vins vous attend</h2>
+            <div class="resa__details">
+              <div class="resa__timing">
+                <div class="resa__time-col">
+                  <span class="resa__label">Du mardi au samedi</span>
+                  <span class="resa__value">12h00 — 14h00 / 19h00 — 22h00</span>
+                </div>
+                <div class="resa__time-col">
+                  <span class="resa__label">Dimanche et lundi</span>
+                  <span class="resa__value">Fermé</span>
+                </div>
               </div>
-              <div class="resa-box__hour-col">
-                <span class="resa-box__hour-label">Dimanche et lundi</span>
-                <span class="resa-box__hour-value">Fermé</span>
+              <div class="resa__address-block">
+                <span class="resa__label">Adresse</span>
+                <span class="resa__value">Adresse à préciser, 37000 Tours</span>
               </div>
-            </div>
-            <div class="resa-box__address">
-              <span class="resa-box__hour-label">Adresse</span>
-              <span class="resa-box__hour-value">Adresse à préciser, 37000 Tours</span>
             </div>
             <a href="tel:+33247000000" class="btn btn--primary">Réserver une table <span class="btn__arrow"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></svg><span class="btn__arrow-bg"></span></span></a>
-          </div>
-          <div class="resa-box__image">
-            <img src="./assets/images/NmrgygAcnHyZ24XJ4polzeA08U.png" alt="Intérieur du restaurant" loading="lazy">
           </div>
         </div>
       </div>
