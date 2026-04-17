@@ -301,13 +301,14 @@ body {
   overflow: visible;
 }
 
-/* Individual dishes — Savoria exact sizes, absolute positioned */
+/* Individual dishes — Savoria exact sizes, absolute positioned, continuous rotation */
 .hero__dish {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
   filter: brightness(0.95);
   z-index: 3;
+  will-change: transform;
 }
 .hero__dish img {
   width: 100%; height: 100%;
@@ -318,16 +319,27 @@ body {
   width: 184px; height: 184px;
   left: calc(18.16% - 92px);
   top: calc(42.2% - 92px);
+  animation: dish-spin-1 25s linear infinite;
 }
 .hero__dish--2 {
   width: 189px; height: 189px;
   left: calc(51.56% - 94.5px);
   top: calc(62.39% - 94.5px);
+  animation: dish-spin-2 30s linear infinite;
 }
 .hero__dish--3 {
   width: 171px; height: 170px;
   left: calc(83.79% - 85.5px);
   top: calc(36.24% - 85px);
+  animation: dish-spin-3 20s linear infinite;
+}
+
+@keyframes dish-spin-1 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes dish-spin-2 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes dish-spin-3 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__dish--1, .hero__dish--2, .hero__dish--3 { animation: none; }
 }
 
 /* Bottom content — text + buttons */
