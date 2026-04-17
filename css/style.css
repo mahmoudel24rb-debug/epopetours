@@ -485,6 +485,25 @@ body {
 @media (max-width: 1199px) { .section-heading__title { font-size: 32px; } }
 @media (max-width: 809px) { .section-heading__title { font-size: 28px; } }
 
+/* About/Resa heading — Savoria: titre gauche + sous-titre droite, même ligne */
+.about-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+.about-heading .section-heading__subtitle {
+  max-width: 450px;
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (max-width: 809px) {
+  .about-heading { flex-direction: column; }
+  .about-heading .section-heading__subtitle { text-align: left; }
+}
+
 /* ========================================
    MENU — 2 colonnes tabs (Savoria)
    ======================================== */
@@ -911,6 +930,16 @@ body {
   line-height: 1.3em;
   letter-spacing: -0.3px;
   color: var(--color-light);
+}
+.resa-box__hours-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+.resa-box__hour-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .resa-box__hours {
   display: flex;
