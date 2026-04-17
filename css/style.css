@@ -109,7 +109,7 @@ body {
   align-items: center;
 }
 .nav__logo-img {
-  height: 40px;
+  height: 55px;
   width: auto;
   display: block;
 }
@@ -324,7 +324,7 @@ body {
 .hero__dish--2 {
   width: 189px; height: 189px;
   left: calc(51.56% - 94.5px);
-  top: calc(62.39% - 94.5px);
+  top: calc(45% - 94.5px);
   animation: dish-spin-2 30s linear infinite;
 }
 .hero__dish--3 {
