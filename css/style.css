@@ -316,21 +316,21 @@ body {
   border-radius: inherit;
 }
 .hero__dish--1 {
-  width: 150px; height: 150px;
-  left: 10px;
-  top: 10px;
+  width: 160px; height: 160px;
+  left: 0;
+  top: 15px;
   animation: dish-spin-1 25s linear infinite;
 }
 .hero__dish--2 {
-  width: 155px; height: 155px;
-  left: 120px;
-  top: 70px;
+  width: 165px; height: 165px;
+  left: 170px;
+  top: 80px;
   animation: dish-spin-2 30s linear infinite;
 }
 .hero__dish--3 {
-  width: 140px; height: 140px;
-  left: 250px;
-  top: 5px;
+  width: 150px; height: 150px;
+  left: 350px;
+  top: 0;
   animation: dish-spin-3 20s linear infinite;
 }
 
@@ -402,9 +402,9 @@ body {
   .hero__left { max-width: 410px; gap: 32px; }
   .hero__text { gap: 16px; }
   .hero__ctas { gap: 16px; }
-  .hero__dish--1 { width: 120px; height: 120px; left: 5px; top: 10px; }
-  .hero__dish--2 { width: 125px; height: 125px; left: 95px; top: 60px; }
-  .hero__dish--3 { width: 115px; height: 115px; left: 195px; top: 5px; }
+  .hero__dish--1 { width: 130px; height: 130px; left: 0; top: 10px; }
+  .hero__dish--2 { width: 135px; height: 135px; left: 130px; top: 65px; }
+  .hero__dish--3 { width: 120px; height: 120px; left: 270px; top: 0; }
 }
 
 @media (max-width: 809px) {
@@ -412,9 +412,9 @@ body {
   .hero__title { font-size: 30px; }
   .hero__bg { display: none; }
   .hero__dishes { max-width: 100%; min-height: 160px; }
-  .hero__dish--1 { width: 90px; height: 90px; left: 5px; top: 5px; }
-  .hero__dish--2 { width: 95px; height: 95px; left: 70px; top: 50px; }
-  .hero__dish--3 { width: 85px; height: 85px; left: 150px; top: 0; }
+  .hero__dish--1 { width: 100px; height: 100px; left: 0; top: 5px; }
+  .hero__dish--2 { width: 105px; height: 105px; left: 100px; top: 50px; }
+  .hero__dish--3 { width: 95px; height: 95px; left: 210px; top: 0; }
   .hero__left { max-width: 100%; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: space-between; }
