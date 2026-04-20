@@ -879,23 +879,30 @@ body {
   gap: 32px;
 }
 
-/* Track : slides en ligne, le JS translate pour changer de slide */
+/* Viewport : overflow hidden ici, pas sur le track */
+.testi-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Track : slides en ligne, le JS translate pour changer */
 .testi-carousel__track {
   display: flex;
-  overflow: hidden;
-  scroll-behavior: smooth;
+  width: 100%;
 }
 
 .testi-slide {
   flex: 0 0 100%;
+  min-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 0;
   border: 1px solid var(--color-border-light);
   border-radius: 4px;
   overflow: hidden;
-  transition: opacity 0.4s ease;
   min-height: 420px;
+  box-sizing: border-box;
 }
 
 .testi-slide__image {
