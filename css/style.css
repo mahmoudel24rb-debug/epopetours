@@ -178,6 +178,7 @@ body {
 }
 .section--dark .btn--ghost { color: var(--color-light); }
 
+/* Arrow container — NO z-index (no stacking context, like Savoria) */
 .btn__arrow {
   width: 34px; height: 34px;
   border-radius: 100px;
@@ -187,37 +188,38 @@ body {
   position: relative;
   flex-shrink: 0;
 }
-.btn__arrow svg { width: 20px; height: 20px; position: relative; z-index: 1; }
+/* SVG arrow icon — z-index 1 (above bg) */
+.btn__arrow svg {
+  width: 20px; height: 20px;
+  position: relative;
+  z-index: 1;
+}
+/* Expanding bg — explicit z-index 0 (below text and svg) */
 .btn__arrow-bg {
   position: absolute;
   inset: 0;
   border-radius: 999px;
   background-color: rgba(44, 44, 44, 0.7);
+  z-index: 0;
   transition: inset 0.4s cubic-bezier(0.12, 0.23, 0.5, 1),
               border-radius 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
 
-/* Hover: circle expands to cover entire button (Savoria effect) */
+/* Hover: circle expands to cover entire button */
 .btn:hover .btn__arrow-bg {
   inset: -74px -89px -83px -210px;
   border-radius: 4px;
 }
-/* Text + arrow icon stay above expanding bg */
+
+/* Text — z-index 1 (above bg), position relative to create stacking */
 .btn__text {
   position: relative;
   z-index: 1;
 }
-.btn__arrow {
-  z-index: 1;
-}
 /* Arrow icon rotates 45deg: diagonal ↗ becomes horizontal → */
-.btn__arrow svg {
-  transition: transform 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
-}
-.btn:hover .btn__arrow svg {
-  transform: rotate(45deg);
-}
+.btn__arrow svg { transition: transform 0.4s cubic-bezier(0.12, 0.23, 0.5, 1); }
+.btn:hover .btn__arrow svg { transform: rotate(45deg); }
 
 /* Arrow SVG icon path (↗) — inline in HTML */
 
