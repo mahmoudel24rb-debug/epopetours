@@ -206,9 +206,11 @@ body {
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
 
-/* Hover: circle expands to cover entire button */
+/* Hover: circle expands to cover entire button
+   Valeurs généreuses pour couvrir n'importe quelle largeur de bouton
+   (overflow:hidden du .btn clip l'excès) */
 .btn:hover .btn__arrow-bg {
-  inset: -74px -89px -83px -210px;
+  inset: -100px -100px -100px -1000px;
   border-radius: 4px;
 }
 
