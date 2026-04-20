@@ -280,38 +280,61 @@
           </div>
           <p class="section-heading__subtitle">Des moments partagés, des assiettes qui parlent d'elles-mêmes</p>
         </div>
-        <div class="testi-container fade-in">
-          <!-- Card 1 -->
-          <div class="testi-card">
-            <div class="testi-card__profile">
-              <img class="testi-card__avatar" src="./assets/images/ZedukbhAqTWzhWu7XgfHVuuBpc.png" alt="Sophie L." loading="lazy">
-              <div class="testi-card__info">
-                <span class="testi-card__name">Sophie L.</span>
-                <span class="testi-card__role">Habituée</span>
+        <div class="testi-carousel fade-in" id="testi-carousel">
+          <div class="testi-carousel__track" id="testi-track">
+            <!-- Avis 1 — Enzo CHARPENTIER -->
+            <article class="testi-slide">
+              <div class="testi-slide__profile">
+                <img class="testi-slide__avatar" src="./assets/images/avis/avatar-003-Enzo-CHARPENTIER.png" alt="Enzo CHARPENTIER" loading="lazy">
+                <div>
+                  <div class="testi-slide__name">Enzo CHARPENTIER</div>
+                  <div class="testi-slide__meta">★★★★★ · il y a 6 mois</div>
+                </div>
               </div>
-            </div>
-            <img class="testi-card__image" src="./assets/images/TH0dtcymw6YcwIqWLOAv7RnULQ.jpg" alt="Plat dégusté" loading="lazy">
-            <div class="testi-card__right">
-              <div class="testi-card__rating">★★★★★</div>
-              <h2 class="testi-card__title">Un bistrot où l'on se sent comme chez soi</h2>
-              <p class="testi-card__text">Cuisine franche, accueil impeccable, et cette carte des vins qui change tout le temps. On y retourne sans hésiter.</p>
-            </div>
+              <h3 class="testi-slide__title">Une belle adresse à Tours</h3>
+              <p class="testi-slide__text">L'Épopée est une vraie réussite. La cuisine y est excellente, inventive sans en faire trop, et toujours préparée avec des produits frais et de saison. La carte change chaque mois, ce qui permet de découvrir régulièrement de nouvelles saveurs. Le service est remarquable : attentionné, efficace, et surtout humain. Un endroit chaleureux, où l'on mange très bien et où l'on a envie de revenir souvent.</p>
+            </article>
+
+            <!-- Avis 2 — Kenza Auger -->
+            <article class="testi-slide">
+              <div class="testi-slide__profile">
+                <img class="testi-slide__avatar" src="./assets/images/avis/avatar-008-Kenza-Auger.png" alt="Kenza Auger" loading="lazy">
+                <div>
+                  <div class="testi-slide__name">Kenza Auger</div>
+                  <div class="testi-slide__meta">★★★★★ · il y a 2 mois</div>
+                </div>
+              </div>
+              <h3 class="testi-slide__title">Excellent moment, rapport qualité-prix parfait</h3>
+              <p class="testi-slide__text">Nous avons dîné au restaurant L'Épopée et nous avons passé un excellent moment. Entrée, plat et dessert, tout était délicieux. Les portions sont parfaitement maîtrisées : généreuses sans ressortir trop lourd. Pour deux, avec entrée, plat, dessert, deux verres de vin et un café, nous avons payé 85€. Franchement, au vu de la qualité des plats et des produits, c'est plus que raisonnable. Mention spéciale pour le gérant, très gentil et accueillant. Je recommande sans hésiter !</p>
+            </article>
+
+            <!-- Avis 3 — Sarah Richard -->
+            <article class="testi-slide">
+              <div class="testi-slide__profile">
+                <img class="testi-slide__avatar" src="./assets/images/avis/avatar-009-Sarah-Richard.png" alt="Sarah Richard" loading="lazy">
+                <div>
+                  <div class="testi-slide__name">Sarah Richard</div>
+                  <div class="testi-slide__meta">★★★★★ · il y a 2 mois</div>
+                </div>
+              </div>
+              <h3 class="testi-slide__title">Une très belle découverte</h3>
+              <p class="testi-slide__text">Une première pour mes copines et moi, et certainement pas la dernière ! Nous comptons y revenir tous les mois, d'autant plus que la carte change régulièrement. Endroit chaleureux et convivial, avec un accueil particulièrement attentionné. Et surtout, une cuisine excellente à base de produits frais. Une très belle découverte !</p>
+            </article>
           </div>
-          <!-- Card 2 -->
-          <div class="testi-card">
-            <div class="testi-card__profile">
-              <img class="testi-card__avatar" src="./assets/images/VVmSiZIDXxbCfGHyCSKoc2Aa1Y.jpg" alt="Marc D." loading="lazy">
-              <div class="testi-card__info">
-                <span class="testi-card__name">Marc D.</span>
-                <span class="testi-card__role">Gourmet</span>
-              </div>
+
+          <!-- Nav: arrows + dots -->
+          <div class="testi-carousel__nav">
+            <button class="testi-arrow" id="testi-prev" aria-label="Avis précédent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="testi-carousel__dots" id="testi-dots">
+              <button class="testi-dot is-active" aria-label="Avis 1"></button>
+              <button class="testi-dot" aria-label="Avis 2"></button>
+              <button class="testi-dot" aria-label="Avis 3"></button>
             </div>
-            <img class="testi-card__image" src="./assets/images/QIPl2NblrnOqeF4k5KDIOTv3Cs.jpg" alt="Vue du restaurant" loading="lazy">
-            <div class="testi-card__right">
-              <div class="testi-card__rating">★★★★★</div>
-              <h2 class="testi-card__title">Le meilleur rapport qualité-prix de Tours</h2>
-              <p class="testi-card__text">Les produits parlent d'eux-mêmes. Chaque assiette raconte une histoire, celle du marché et des producteurs.</p>
-            </div>
+            <button class="testi-arrow" id="testi-next" aria-label="Avis suivant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
         </div>
       </div>

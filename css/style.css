@@ -871,89 +871,127 @@ body {
    Left: profile row (avatar 64x64 + name) + portrait image
    Right: rating + H2 title + text
    ======================================== */
-.testi-container {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
+/* Carousel container */
+.testi-carousel {
   width: 100%;
-}
-.testi-card {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 24px;
+  gap: 32px;
+}
+
+/* Track : slides en ligne, le JS translate pour changer de slide */
+.testi-carousel__track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.testi-slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
   border: 1px solid var(--color-border-light);
   border-radius: 4px;
+  transition: opacity 0.4s ease;
 }
-/* Profile row: avatar 64x64 + name/role */
-.testi-card__profile {
+
+/* Profile row */
+.testi-slide__profile {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 12px;
-}
-.testi-card__avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 4px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.testi-card__info { display: flex; flex-direction: column; gap: 4px; }
-.testi-card__name {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
-  color: inherit;
-}
-.testi-card__role {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--color-muted);
-}
-/* Portrait image below profile */
-.testi-card__image {
-  width: 100%;
-  aspect-ratio: 1.477 / 1;
-  object-fit: cover;
-  border-radius: 4px;
-}
-/* Right content */
-.testi-card__right {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
 }
-.testi-card__rating {
-  height: 24px;
-  color: var(--color-cta);
-  font-size: 18px;
-  letter-spacing: 2px;
+.testi-slide__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-light);
 }
-.testi-card__title {
+.testi-slide__name {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.testi-slide__meta {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-cta);
+  letter-spacing: 1px;
+}
+
+/* Content */
+.testi-slide__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: -0.3px;
   color: var(--color-text);
 }
-.testi-card__text {
+.testi-slide__text {
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.4em;
+  line-height: 1.6em;
   color: var(--color-muted);
 }
-.section--dark .testi-card__title { color: var(--color-light); }
-.section--dark .testi-card__text { color: rgba(255, 249, 243, 0.7); }
-@media (max-width: 1199px) {
-  .testi-card__title { font-size: 32px; }
+
+/* Navigation */
+.testi-carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
+.testi-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.testi-arrow:hover {
+  background: var(--color-cta);
+  color: var(--color-light);
+  border-color: var(--color-cta);
+}
+.testi-arrow svg { width: 20px; height: 20px; }
+
+.testi-carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border-light);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+.testi-dot.is-active {
+  background: var(--color-cta);
+  width: 24px;
+  border-radius: 4px;
+}
+
 @media (max-width: 809px) {
-  .testi-container { flex-direction: column; }
-  .testi-card { padding: 12px; }
-  .testi-card__title { font-size: 28px; }
+  .testi-slide { padding: 20px; }
+  .testi-slide__title { font-size: 22px; }
+  .testi-slide__avatar { width: 52px; height: 52px; }
 }
 
 /* ========================================
