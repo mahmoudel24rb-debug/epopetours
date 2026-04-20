@@ -201,16 +201,20 @@ body {
   border-radius: 999px;
   background-color: rgba(44, 44, 44, 0.7);
   z-index: 0;
-  transition: inset 1.2s cubic-bezier(0.12, 0.23, 0.5, 1),
-              border-radius 1.2s cubic-bezier(0.12, 0.23, 0.5, 1);
+  transition: inset 0.4s cubic-bezier(0.12, 0.23, 0.5, 1),
+              border-radius 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
 }
 .btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
 
-/* Hover: circle expands to cover entire button
-   Valeurs généreuses dans toutes les directions pour couvrir
-   n'importe quelle largeur (overflow:hidden du .btn clip l'excès) */
+/* Hover: circle expands (Savoria exact values for standard buttons) */
 .btn:hover .btn__arrow-bg {
-  inset: -1000px;
+  inset: -74px -89px -83px -210px;
+  border-radius: 4px;
+}
+
+/* Wide buttons (boutons larges : about, resa) — expand plus généreux */
+.btn--wide:hover .btn__arrow-bg {
+  inset: -100px -600px -100px -600px;
   border-radius: 4px;
 }
 
