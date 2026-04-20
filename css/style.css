@@ -892,35 +892,34 @@ body {
   width: 100%;
 }
 
-/* Layout paysage : image en haut pleine largeur, contenu en dessous */
+/* Slide : layout Google Review — avatar/nom en haut, titre, texte, puis image en thumb */
 .testi-slide {
   flex: 0 0 100%;
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 20px;
+  padding: 32px;
   border: 1px solid var(--color-border-light);
   border-radius: 4px;
-  overflow: hidden;
   box-sizing: border-box;
-}
-
-.testi-slide__image {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border-light);
 }
 
 .testi-slide__content {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 28px 32px;
+}
+
+/* Thumbnail image — taille native, cadre propre, pas d'étirement */
+.testi-slide__image {
+  display: block;
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-light);
+  align-self: flex-start;
 }
 
 @media (max-width: 809px) {
