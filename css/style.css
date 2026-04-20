@@ -204,15 +204,11 @@ body {
   border-radius: 4px;
 }
 /* Text + arrow icon stay above expanding bg */
-.btn { position: relative; overflow: hidden; }
 .btn__text {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .btn__arrow {
-  z-index: 2;
-}
-.btn__arrow-bg {
   z-index: 1;
 }
 /* Arrow icon rotates 45deg: diagonal ↗ becomes horizontal → */
