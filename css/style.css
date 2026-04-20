@@ -196,7 +196,7 @@ body {
   transition: inset 0.4s cubic-bezier(0.12, 0.23, 0.5, 1),
               border-radius 0.4s cubic-bezier(0.12, 0.23, 0.5, 1);
 }
-.btn--primary .btn__arrow-bg { background-color: rgba(0, 0, 0, 0.3); }
+.btn--primary .btn__arrow-bg { background-color: #1a1a1a; }
 
 /* Hover: circle expands to cover entire button (Savoria effect) */
 .btn:hover .btn__arrow-bg {
@@ -204,11 +204,15 @@ body {
   border-radius: 4px;
 }
 /* Text + arrow icon stay above expanding bg */
+.btn { position: relative; overflow: hidden; }
 .btn__text {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .btn__arrow {
+  z-index: 2;
+}
+.btn__arrow-bg {
   z-index: 1;
 }
 /* Arrow icon rotates 45deg: diagonal ↗ becomes horizontal → */
