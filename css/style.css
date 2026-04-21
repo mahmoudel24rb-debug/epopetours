@@ -270,6 +270,7 @@ body {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
   .nav__inner { padding: 12px 20px; }
+  .nav__logo-img { height: 36px; }
 }
 
 /* ========================================
@@ -441,15 +442,39 @@ body {
 }
 
 @media (max-width: 809px) {
-  .hero { padding: 80px 20px 24px; }
-  .hero__title { font-size: 30px; }
-  .hero__bg { display: none; }
-  .hero__dishes { max-width: 100%; min-height: 160px; }
-  .hero__dish--1 { width: 100px; height: 100px; left: 0; top: 5px; }
-  .hero__dish--2 { width: 105px; height: 105px; left: 100px; top: 50px; }
-  .hero__dish--3 { width: 95px; height: 95px; left: 210px; top: 0; }
-  .hero__left { max-width: 100%; }
-  .hero__ctas { flex-direction: column; }
+  .hero {
+    padding: 72px 20px 40px;
+    min-height: auto;
+    gap: 32px;
+  }
+  .hero__title { font-size: 34px; line-height: 1.15em; }
+  .hero__subtitle { font-size: 15px; }
+  .hero__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    transform: none;
+    mask: linear-gradient(180deg, #000 62%, rgba(0,0,0,0) 100%);
+    -webkit-mask: linear-gradient(180deg, #000 62%, rgba(0,0,0,0) 100%);
+  }
+  .hero__top {
+    padding-top: 180px;
+    justify-content: center;
+  }
+  .hero__dishes {
+    max-width: 320px;
+    min-height: 140px;
+    margin: 0 auto;
+  }
+  .hero__dish--1 { width: 100px; height: 100px; left: 0; top: 20px; }
+  .hero__dish--2 { width: 115px; height: 115px; left: 102px; top: 10px; }
+  .hero__dish--3 { width: 100px; height: 100px; left: 220px; top: 20px; }
+  .hero__bottom { align-items: flex-start; }
+  .hero__left { max-width: 100%; gap: 28px; }
+  .hero__ctas { flex-direction: column; gap: 12px; }
   .hero__ctas .btn { width: 100%; justify-content: space-between; }
 }
 
@@ -1037,29 +1062,47 @@ body {
   border-radius: 4px;
 }
 
-/* Responsive ≤ 809px : stack vertical */
+/* Responsive ≤ 809px : stack vertical
+   Ordre template Savoria mobile :
+   1. Profile (avatar + nom)  2. Image plat  3. Étoiles  4. Titre  5. Texte */
 @media (max-width: 809px) {
   .testi-slide {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
     min-height: auto;
-  }
-  .testi-slide__image {
-    height: 240px;
-    width: 100%;
+    padding: 20px;
+    gap: 16px;
   }
   .testi-slide__content {
-    padding: 28px 24px;
-    gap: 14px;
+    display: contents;
+  }
+  .testi-slide__profile {
+    order: 1;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .testi-slide__image {
+    order: 2;
+    width: 100%;
+    height: 220px;
+    border-radius: 4px;
+  }
+  .testi-slide__meta-top {
+    order: 3;
   }
   .testi-slide__title {
+    order: 4;
     font-size: 22px;
   }
   .testi-slide__text {
+    order: 5;
     font-size: 14px;
   }
   .testi-slide__avatar {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }
 
