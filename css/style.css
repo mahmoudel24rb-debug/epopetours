@@ -255,14 +255,14 @@ body {
 .nav__overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(12, 12, 12, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 100px 24px 40px;
   gap: 24px;
   opacity: 0;
@@ -282,18 +282,41 @@ body {
 .nav__overlay-link {
   font-family: var(--font-body);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1px;
   color: #FFF9F3;
   transition: color 0.2s ease;
 }
 .nav__overlay-link:hover,
-.nav__overlay-link.is-active { color: var(--color-cta); }
+.nav__overlay-link.is-active { color: #FFE2C6; }
 .nav__overlay-links .btn {
-  width: 100%;
-  justify-content: space-between;
   margin-top: 16px;
+  background-color: #FFE2C6;
+  color: #111111;
+  border: 1px solid #FFE2C6;
+  padding: 8px 8px 8px 20px;
+  min-width: 240px;
+  justify-content: space-between;
 }
+.nav__overlay-links .btn .btn__arrow {
+  background-color: #111111;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.nav__overlay-links .btn .btn__arrow svg {
+  width: 16px;
+  height: 16px;
+  color: #FFF9F3;
+  position: relative;
+  z-index: 1;
+}
+.nav__overlay-links .btn .btn__arrow-bg { display: none; }
 
 @media (max-width: 809px) {
   .nav__links, .nav__cta { display: none; }
@@ -1233,17 +1256,17 @@ body {
 }
 
 /* ========================================
-   FOOTER — Savoria exact structure
+   FOOTER — Savoria exact structure (DARK theme)
    Top: 2 link columns + newsletter + socials
-   Links as bordered buttons with arrow icon
+   Links as bordered dark buttons with arrow icon
    Bottom: copyright bar with border-top
    ======================================== */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-bg);
-  border-top: 1px solid var(--color-border-light);
+  background-color: #111111;
+  border-top: 1px solid rgba(255, 249, 243, 0.1);
   padding: 0;
 }
 .footer__inner {
@@ -1269,31 +1292,38 @@ body {
 .footer__col-title {
   font-family: var(--font-body);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1px;
-  color: var(--color-cta);
+  color: #FFE2C6;
   margin-bottom: 8px;
 }
-/* Footer link buttons — bordered with arrow (Savoria exact) */
+/* Footer link buttons — bordered dark with arrow (Savoria template) */
 .footer__link-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid var(--color-border-light);
+  background-color: rgba(44, 44, 44, 0.5);
+  border: 1px solid rgba(188, 188, 188, 0.16);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 4px;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1px;
-  color: var(--color-muted);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  color: rgba(255, 249, 243, 0.7);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
-.footer__link-btn:hover { color: var(--color-cta); border-color: var(--color-cta); }
+.footer__link-btn:hover {
+  color: #FFF9F3;
+  border-color: rgba(255, 226, 198, 0.5);
+  background-color: rgba(44, 44, 44, 0.8);
+}
 .footer__link-btn svg {
   width: 16px; height: 16px;
-  color: var(--color-cta);
+  color: #FFE2C6;
   flex-shrink: 0;
 }
 /* Newsletter */
@@ -1306,14 +1336,15 @@ body {
 .footer__newsletter-title {
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--color-cta);
+  font-weight: 500;
+  color: #FFE2C6;
   margin-bottom: 4px;
 }
 .footer__newsletter-text {
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--color-muted);
-  line-height: 1.4em;
+  color: rgba(255, 249, 243, 0.6);
+  line-height: 1.5em;
 }
 .footer__newsletter-form {
   display: flex;
@@ -1321,33 +1352,38 @@ body {
 }
 .footer__newsletter-input {
   flex: 1;
-  padding: 10px 14px;
-  background: var(--color-light);
-  border: 1px solid var(--color-border-light);
+  padding: 12px 14px;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(188, 188, 188, 0.16);
   border-radius: 4px;
-  color: var(--color-text);
+  color: #FFF9F3;
+  font-family: var(--font-body);
   font-size: 14px;
 }
-.footer__newsletter-input::placeholder { color: rgba(0, 0, 0, 0.3); }
-.footer__newsletter-input:focus { outline: none; border-color: var(--color-cta); }
+.footer__newsletter-input::placeholder { color: rgba(255, 249, 243, 0.3); }
+.footer__newsletter-input:focus { outline: none; border-color: rgba(255, 226, 198, 0.5); }
 .footer__newsletter-submit {
   width: 44px; height: 44px;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid rgba(188, 188, 188, 0.16);
   border-radius: 4px;
-  background: var(--color-light);
+  background: rgba(20, 20, 20, 0.6);
   display: flex; align-items: center; justify-content: center;
-  color: var(--color-muted);
+  color: rgba(255, 249, 243, 0.85);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
-.footer__newsletter-submit:hover { background: var(--color-cta); border-color: var(--color-cta); color: #fff; }
+.footer__newsletter-submit:hover {
+  background: #FFE2C6;
+  border-color: #FFE2C6;
+  color: #111111;
+}
 .footer__newsletter-submit svg { width: 18px; height: 18px; }
 /* Social icons row */
 .footer__socials { display: flex; gap: 16px; margin-top: 12px; }
 .footer__social {
   width: 24px; height: 24px;
   display: flex; align-items: center; justify-content: center;
-  color: var(--color-cta);
+  color: #FFE2C6;
   transition: opacity 0.2s ease;
 }
 .footer__social:hover { opacity: 0.7; }
@@ -1358,11 +1394,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 24px;
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid rgba(255, 249, 243, 0.1);
   font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--color-muted);
+  font-size: 13px;
+  color: rgba(255, 249, 243, 0.6);
 }
+.footer__bottom a { color: rgba(255, 249, 243, 0.6); transition: color 0.2s ease; }
+.footer__bottom a:hover { color: #FFE2C6; }
 @media (max-width: 809px) {
   .footer__inner { padding: 60px 20px 30px; gap: 40px; }
   .footer__top { flex-direction: column; gap: 40px; }
