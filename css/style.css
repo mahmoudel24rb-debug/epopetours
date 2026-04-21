@@ -220,6 +220,13 @@ body {
   border-radius: 4px;
 }
 
+/* Mobile : boutons full-width → override pour que le bg couvre toute la largeur */
+@media (max-width: 809px) {
+  .btn:hover .btn__arrow-bg {
+    inset: -100px -100px -100px -600px;
+  }
+}
+
 /* Text — z-index 1 (above bg), position relative to create stacking */
 .btn__text {
   position: relative;
