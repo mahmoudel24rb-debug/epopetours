@@ -284,39 +284,16 @@ body {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.1px;
-  color: #FFF9F3;
+  color: var(--color-light);
   transition: color 0.2s ease;
 }
 .nav__overlay-link:hover,
-.nav__overlay-link.is-active { color: #FFE2C6; }
+.nav__overlay-link.is-active { color: var(--color-cta); }
 .nav__overlay-links .btn {
   margin-top: 16px;
-  background-color: #FFE2C6;
-  color: #111111;
-  border: 1px solid #FFE2C6;
-  padding: 8px 8px 8px 20px;
   min-width: 240px;
   justify-content: space-between;
 }
-.nav__overlay-links .btn .btn__arrow {
-  background-color: #111111;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.nav__overlay-links .btn .btn__arrow svg {
-  width: 16px;
-  height: 16px;
-  color: #FFF9F3;
-  position: relative;
-  z-index: 1;
-}
-.nav__overlay-links .btn .btn__arrow-bg { display: none; }
 
 @media (max-width: 809px) {
   .nav__links, .nav__cta { display: none; }
@@ -1256,17 +1233,17 @@ body {
 }
 
 /* ========================================
-   FOOTER — Savoria exact structure (DARK theme)
+   FOOTER — Structure Savoria, charte L'Épopée (cream + rouge)
    Top: 2 link columns + newsletter + socials
-   Links as bordered dark buttons with arrow icon
+   Links as bordered buttons with arrow icon (full-width on mobile)
    Bottom: copyright bar with border-top
    ======================================== */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #111111;
-  border-top: 1px solid rgba(255, 249, 243, 0.1);
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border-light);
   padding: 0;
 }
 .footer__inner {
@@ -1294,36 +1271,33 @@ body {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.1px;
-  color: #FFE2C6;
+  color: var(--color-cta);
   margin-bottom: 8px;
 }
-/* Footer link buttons — bordered dark with arrow (Savoria template) */
+/* Footer link buttons — bordered with arrow (structure Savoria, couleurs L'Épopée) */
 .footer__link-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 12px 16px;
-  background-color: rgba(44, 44, 44, 0.5);
-  border: 1px solid rgba(188, 188, 188, 0.16);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: transparent;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1px;
-  color: rgba(255, 249, 243, 0.7);
+  color: var(--color-muted);
   transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 .footer__link-btn:hover {
-  color: #FFF9F3;
-  border-color: rgba(255, 226, 198, 0.5);
-  background-color: rgba(44, 44, 44, 0.8);
+  color: var(--color-cta);
+  border-color: var(--color-cta);
 }
 .footer__link-btn svg {
   width: 16px; height: 16px;
-  color: #FFE2C6;
+  color: var(--color-cta);
   flex-shrink: 0;
 }
 /* Newsletter */
@@ -1337,13 +1311,13 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 500;
-  color: #FFE2C6;
+  color: var(--color-cta);
   margin-bottom: 4px;
 }
 .footer__newsletter-text {
   font-family: var(--font-body);
   font-size: 14px;
-  color: rgba(255, 249, 243, 0.6);
+  color: var(--color-muted);
   line-height: 1.5em;
 }
 .footer__newsletter-form {
@@ -1353,29 +1327,29 @@ body {
 .footer__newsletter-input {
   flex: 1;
   padding: 12px 14px;
-  background: rgba(20, 20, 20, 0.6);
-  border: 1px solid rgba(188, 188, 188, 0.16);
+  background: var(--color-light);
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
-  color: #FFF9F3;
+  color: var(--color-text);
   font-family: var(--font-body);
   font-size: 14px;
 }
-.footer__newsletter-input::placeholder { color: rgba(255, 249, 243, 0.3); }
-.footer__newsletter-input:focus { outline: none; border-color: rgba(255, 226, 198, 0.5); }
+.footer__newsletter-input::placeholder { color: rgba(0, 0, 0, 0.3); }
+.footer__newsletter-input:focus { outline: none; border-color: var(--color-cta); }
 .footer__newsletter-submit {
   width: 44px; height: 44px;
-  border: 1px solid rgba(188, 188, 188, 0.16);
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
-  background: rgba(20, 20, 20, 0.6);
+  background: var(--color-light);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255, 249, 243, 0.85);
+  color: var(--color-muted);
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .footer__newsletter-submit:hover {
-  background: #FFE2C6;
-  border-color: #FFE2C6;
-  color: #111111;
+  background: var(--color-cta);
+  border-color: var(--color-cta);
+  color: var(--color-light);
 }
 .footer__newsletter-submit svg { width: 18px; height: 18px; }
 /* Social icons row */
@@ -1383,7 +1357,7 @@ body {
 .footer__social {
   width: 24px; height: 24px;
   display: flex; align-items: center; justify-content: center;
-  color: #FFE2C6;
+  color: var(--color-cta);
   transition: opacity 0.2s ease;
 }
 .footer__social:hover { opacity: 0.7; }
@@ -1394,13 +1368,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 249, 243, 0.1);
+  border-top: 1px solid var(--color-border-light);
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255, 249, 243, 0.6);
+  color: var(--color-muted);
 }
-.footer__bottom a { color: rgba(255, 249, 243, 0.6); transition: color 0.2s ease; }
-.footer__bottom a:hover { color: #FFE2C6; }
+.footer__bottom a { color: var(--color-muted); transition: color 0.2s ease; }
+.footer__bottom a:hover { color: var(--color-cta); }
 @media (max-width: 809px) {
   .footer__inner { padding: 60px 20px 30px; gap: 40px; }
   .footer__top { flex-direction: column; gap: 40px; width: 100%; }
